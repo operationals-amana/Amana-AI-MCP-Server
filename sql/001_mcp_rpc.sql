@@ -282,7 +282,7 @@ BEGIN
       'deliverables', p.deliverables,
       'technologyStack', p."technologyStack",
       'lessonsLearned', p."lessonsLearned",
-      'qcScore', p.qcScore,
+      'qcScore', p."qcScore",
       'proposalGdriveUrl', p."proposalGdriveUrl"
     )
     INTO payload
