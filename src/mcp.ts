@@ -6,6 +6,18 @@ import {
   searchCorpus,
   searchDeliverableChunks,
 } from "./db.js";
+import {
+  mayReadConfidential,
+  principalClientId,
+  principalClientName,
+  principalEmail,
+  principalLabel,
+  principalPracticeGroup,
+  principalRole,
+  principalUserId,
+  type Principal,
+} from "./auth/principal.js";
+import { recordRequest } from "./auth/store.js";
 
 const DOC_TYPES = ["expert", "project", "partner", "knowledge", "document"] as const;
 
@@ -40,17 +52,6 @@ function wrapUntrusted(payload: unknown): string {
   ].join("\n");
 }
 
-function logCall(tool: string, args: unknown, rowCount: number, started: number) {
-  console.log(
-    JSON.stringify({
-      ts: new Date().toISOString(),
-      tool,
-      args,
-      rowCount,
-      ms: Date.now() - started,
-    }),
-  );
-}
 
 /** Provenance a caller needs to cite a hit, dropping nulls to keep results terse. */
 function provenance(hit: {
@@ -85,21 +86,124 @@ function provenance(hit: {
   );
 }
 
-export type ServerOptions = {
-  /**
-   * Whether this session may read documents marked confidential. Set only when
-   * the request presented the privileged bearer token, so confidential
-   * deliverables are unreachable from an ordinary MCP client.
-   */
-  includeConfidential?: boolean;
+export type RequestContext = {
+  ip?: string | null;
+  userAgent?: string | null;
 };
 
-export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
-  const includeConfidential = options.includeConfidential === true;
+export type ServerOptions = {
+  /**
+   * The authenticated caller. Every tool call made through this server is
+   * attributed to them, and their scopes decide what the corpus functions are
+   * allowed to return — notably whether confidential deliverables are visible.
+   */
+  principal: Principal;
+  requestContext?: RequestContext;
+};
+
+type ToolOutcome = {
+  payload: unknown;
+  rowCount: number;
+  /** Record ids the caller actually received, for the audit trail. */
+  sourceIds: string[];
+  isError?: boolean;
+};
+
+export function createAmanaMcpServer(options: ServerOptions): McpServer {
+  const { principal, requestContext } = options;
+
+  // Confidentiality is decided here, once, from the caller's scopes rather than
+  // from a tool argument, so no combination of arguments can widen it.
+  const includeConfidential = mayReadConfidential(principal);
+
+  /**
+   * Runs one tool call and writes the audit record for it.
+   *
+   * Every path through a tool goes through here, so there is no way to answer an
+   * MCP request without logging who asked and which records came back. The audit
+   * write is fire-and-forget: it must not be able to fail a legitimate call, and
+   * recordRequest swallows its own errors to stdout.
+   */
+  async function audited(
+    tool: string,
+    args: Record<string, unknown>,
+    run: () => Promise<ToolOutcome>,
+  ): Promise<{ content: { type: "text"; text: string }[]; isError?: boolean }> {
+    const started = Date.now();
+    try {
+      const outcome = await run();
+      log(tool, args, started, outcome.rowCount, null);
+      void recordRequest({
+        userId: principalUserId(principal),
+        userEmail: principalEmail(principal),
+        userRole: principalRole(principal),
+        userPracticeGroup: principalPracticeGroup(principal),
+        clientId: principalClientId(principal),
+        clientName: principalClientName(principal),
+        tool,
+        arguments: args,
+        rowCount: outcome.rowCount,
+        sourceIds: outcome.sourceIds,
+        confidentialPermitted: includeConfidential,
+        outcome: "ok",
+        durationMs: Date.now() - started,
+        ip: requestContext?.ip ?? null,
+        userAgent: requestContext?.userAgent ?? null,
+      });
+      return {
+        content: [{ type: "text", text: wrapUntrusted(outcome.payload) }],
+        ...(outcome.isError ? { isError: true } : {}),
+      };
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      log(tool, args, started, null, message);
+      void recordRequest({
+        userId: principalUserId(principal),
+        userEmail: principalEmail(principal),
+        userRole: principalRole(principal),
+        userPracticeGroup: principalPracticeGroup(principal),
+        clientId: principalClientId(principal),
+        clientName: principalClientName(principal),
+        tool,
+        arguments: args,
+        rowCount: null,
+        sourceIds: [],
+        confidentialPermitted: includeConfidential,
+        outcome: "error",
+        error: message.slice(0, 2000),
+        durationMs: Date.now() - started,
+        ip: requestContext?.ip ?? null,
+        userAgent: requestContext?.userAgent ?? null,
+      });
+      throw error;
+    }
+  }
+
+  function log(
+    tool: string,
+    args: unknown,
+    started: number,
+    rowCount: number | null,
+    error: string | null,
+  ) {
+    console.log(
+      JSON.stringify({
+        ts: new Date().toISOString(),
+        tool,
+        principal: principalLabel(principal),
+        client: principalClientId(principal),
+        confidential: includeConfidential,
+        args,
+        rowCount,
+        ...(error ? { error } : {}),
+        ms: Date.now() - started,
+      }),
+    );
+  }
 
   const server = new McpServer({
     name: "amana-knowledge",
-    version: "0.2.0",
+    version: "0.3.0",
   });
 
   server.registerTool(
@@ -117,7 +221,13 @@ export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
           .array(z.enum(DOC_TYPES))
           .optional()
           .describe(
-            "Restrict to these record types. Use ['document'] to search only ingested deliverables. Omit to search everything.",
+            "Restrict to these record types. Set this whenever the question is about a " +
+              "particular kind of record: ['expert'] for who-has-which-capability and " +
+              "staffing questions, ['partner'] for implementing partners and consortium " +
+              "members, ['project'] for comparable past work, ['document'] for ingested " +
+              "deliverables. Filtering markedly improves results for people and " +
+              "organisation questions, because deliverables otherwise dominate the " +
+              "ranking. Omit only when the question genuinely spans several kinds.",
           ),
         sector: z
           .string()
@@ -161,31 +271,27 @@ export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
         openWorldHint: false,
       },
     },
-    async ({ query, types, sector, donor, practice_group, doc_type, year_from, year_to, limit }) => {
-      const started = Date.now();
-      const hits = await searchCorpus({
-        query,
-        types,
-        sector,
-        donor,
-        practice_group,
-        doc_type,
-        year_from,
-        year_to,
-        limit,
-        includeConfidential,
-      });
-      logCall(
+    async ({ query, types, sector, donor, practice_group, doc_type, year_from, year_to, limit }) =>
+      audited(
         "search_corpus",
         { query, types, sector, donor, practice_group, doc_type, year_from, year_to, limit },
-        hits.length,
-        started,
-      );
-      return {
-        content: [
-          {
-            type: "text",
-            text: wrapUntrusted({
+        async () => {
+          const hits = await searchCorpus({
+            query,
+            types,
+            sector,
+            donor,
+            practice_group,
+            doc_type,
+            year_from,
+            year_to,
+            limit,
+            includeConfidential,
+          });
+          return {
+            rowCount: hits.length,
+            sourceIds: hits.map((hit) => hit.id),
+            payload: {
               count: hits.length,
               hits: hits.map((hit) => ({
                 id: hit.id,
@@ -195,11 +301,10 @@ export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
                 score: hit.score,
                 ...provenance(hit),
               })),
-            }),
-          },
-        ],
-      };
-    },
+            },
+          };
+        },
+      ),
   );
 
   server.registerTool(
@@ -233,41 +338,39 @@ export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
         openWorldHint: false,
       },
     },
-    async ({ query, document_id, limit }) => {
-      const started = Date.now();
-      const chunks = await searchDeliverableChunks({
-        query,
-        documentId: document_id,
-        limit,
-        includeConfidential,
-      });
-      logCall("search_deliverable_chunks", { query, document_id, limit }, chunks.length, started);
-      return {
-        content: [
-          {
-            type: "text",
-            text: wrapUntrusted({
-              count: chunks.length,
-              passages: chunks.map((chunk) => ({
-                chunkId: chunk.chunk_id,
-                documentId: chunk.document_id,
-                title: chunk.title,
-                heading: chunk.heading,
-                pages:
-                  chunk.page_from == null
-                    ? undefined
-                    : chunk.page_to != null && chunk.page_to !== chunk.page_from
-                      ? `${chunk.page_from}-${chunk.page_to}`
-                      : `${chunk.page_from}`,
-                sourceUrl: chunk.source_url,
-                score: chunk.score,
-                content: chunk.content,
-              })),
-            }),
+    async ({ query, document_id, limit }) =>
+      audited("search_deliverable_chunks", { query, document_id, limit }, async () => {
+        const chunks = await searchDeliverableChunks({
+          query,
+          documentId: document_id,
+          limit,
+          includeConfidential,
+        });
+        return {
+          rowCount: chunks.length,
+          // Passages are logged by the document they came from: that is the unit
+          // confidentiality is set on, and the unit an audit asks about.
+          sourceIds: [...new Set(chunks.map((chunk) => chunk.document_id))],
+          payload: {
+            count: chunks.length,
+            passages: chunks.map((chunk) => ({
+              chunkId: chunk.chunk_id,
+              documentId: chunk.document_id,
+              title: chunk.title,
+              heading: chunk.heading,
+              pages:
+                chunk.page_from == null
+                  ? undefined
+                  : chunk.page_to != null && chunk.page_to !== chunk.page_from
+                    ? `${chunk.page_from}-${chunk.page_to}`
+                    : `${chunk.page_from}`,
+              sourceUrl: chunk.source_url,
+              score: chunk.score,
+              content: chunk.content,
+            })),
           },
-        ],
-      };
-    },
+        };
+      }),
   );
 
   server.registerTool(
@@ -292,25 +395,22 @@ export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
         openWorldHint: false,
       },
     },
-    async ({ id, section }) => {
-      const started = Date.now();
-      const record = await fetchDocument(id, section, includeConfidential);
-      logCall("fetch_document", { id, section }, record ? 1 : 0, started);
-      if (!record) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: wrapUntrusted({ error: "not_found", id }),
-            },
-          ],
-          isError: true,
-        };
-      }
-      return {
-        content: [{ type: "text", text: wrapUntrusted(record) }],
-      };
-    },
+    async ({ id, section }) =>
+      audited("fetch_document", { id, section }, async () => {
+        const record = await fetchDocument(id, section, includeConfidential);
+        if (!record) {
+          // A confidential document withheld from this caller is indistinguishable
+          // from one that does not exist, which is the point: the response must not
+          // confirm that a record the caller may not read is there.
+          return {
+            rowCount: 0,
+            sourceIds: [],
+            payload: { error: "not_found", id },
+            isError: true,
+          };
+        }
+        return { rowCount: 1, sourceIds: [id], payload: record };
+      }),
   );
 
   server.registerTool(
@@ -334,14 +434,15 @@ export function createAmanaMcpServer(options: ServerOptions = {}): McpServer {
         openWorldHint: false,
       },
     },
-    async ({ recent_runs }) => {
-      const started = Date.now();
-      const status = await ingestionStatus(recent_runs ?? 5);
-      logCall("ingestion_status", { recent_runs }, status ? 1 : 0, started);
-      return {
-        content: [{ type: "text", text: wrapUntrusted(status ?? { error: "unavailable" }) }],
-      };
-    },
+    async ({ recent_runs }) =>
+      audited("ingestion_status", { recent_runs }, async () => {
+        const status = await ingestionStatus(recent_runs ?? 5);
+        return {
+          rowCount: status ? 1 : 0,
+          sourceIds: [],
+          payload: status ?? { error: "unavailable" },
+        };
+      }),
   );
 
   return server;

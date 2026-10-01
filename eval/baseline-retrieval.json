@@ -1,0 +1,115 @@
+{
+  "probedAt": "2026-09-30T01:45:28.452Z",
+  "goldenSet": "eval/golden-set.json",
+  "k": 10,
+  "strategies": [
+    {
+      "strategy": "current  public.search_corpus",
+      "scope": "all positives",
+      "n": 85,
+      "zeroHit": 0,
+      "recallAt1": 21,
+      "recallAt3": 44,
+      "recallAt10": 60,
+      "mrr": 0.3988,
+      "errors": 0,
+      "byLanguage": {
+        "en": {
+          "n": 43,
+          "hit": 26
+        },
+        "id": {
+          "n": 42,
+          "hit": 34
+        }
+      },
+      "crossLingual": {
+        "n": 20,
+        "hit": 8
+      }
+    },
+    {
+      "strategy": "proposed mcp_search_tsquery",
+      "scope": "document-backed positives",
+      "n": 70,
+      "zeroHit": 0,
+      "recallAt1": 24,
+      "recallAt3": 43,
+      "recallAt10": 58,
+      "mrr": 0.4976,
+      "errors": 0,
+      "byLanguage": {
+        "en": {
+          "n": 36,
+          "hit": 26
+        },
+        "id": {
+          "n": 34,
+          "hit": 32
+        }
+      },
+      "crossLingual": {
+        "n": 20,
+        "hit": 10
+      }
+    },
+    {
+      "strategy": "hybrid  search_corpus_hybrid",
+      "scope": "all positives",
+      "n": 85,
+      "zeroHit": 0,
+      "recallAt1": 46,
+      "recallAt3": 64,
+      "recallAt10": 78,
+      "mrr": 0.6656,
+      "errors": 0,
+      "byLanguage": {
+        "en": {
+          "n": 43,
+          "hit": 40
+        },
+        "id": {
+          "n": 42,
+          "hit": 38
+        }
+      },
+      "crossLingual": {
+        "n": 20,
+        "hit": 20
+      },
+      "byRecordType": {
+        "document": {
+          "n": 70,
+          "at1": 43,
+          "at10": 70
+        },
+        "expert": {
+          "n": 6,
+          "at1": 1,
+          "at10": 3
+        },
+        "partner": {
+          "n": 4,
+          "at1": 0,
+          "at10": 0
+        },
+        "project": {
+          "n": 3,
+          "at1": 2,
+          "at10": 3
+        },
+        "knowledge": {
+          "n": 2,
+          "at1": 0,
+          "at10": 2
+        }
+      }
+    }
+  ],
+  "negatives": {
+    "n": 15,
+    "zero": 0,
+    "weak": 0,
+    "strong": 15
+  }
+}

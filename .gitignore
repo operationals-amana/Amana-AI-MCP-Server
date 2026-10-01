@@ -6,3 +6,13 @@ dist/
 *.log
 .railway/
 *.xlsx
+
+# Python bytecode. The evaluation scripts under scripts/ run against the
+# proposal-agent virtualenv rather than a venv inside this repo, but running them
+# from here still leaves caches behind.
+__pycache__/
+*.py[cod]
+
+# OS noise
+.DS_Store
+Thumbs.db

@@ -19,6 +19,99 @@
 CREATE EXTENSION IF NOT EXISTS unaccent WITH SCHEMA extensions;
 
 -- ---------------------------------------------------------------------------
+-- mcp_search_tsquery
+-- ---------------------------------------------------------------------------
+--
+-- Builds the tsquery used by every search function here.
+--
+-- This replaces plainto_tsquery, which ANDs every term: it requires each word of
+-- the query to appear in the same document, so the result set shrinks as the query
+-- grows. Measured on one corpus phrase before this change, the same search returned
+-- 10 hits at one word, 6 at two and 1 by three; across 85 natural-language
+-- questions with known answers in the corpus, 100% returned nothing and recall@10
+-- was 0%. Since the MCP tool description invites natural-language search, that was
+-- the normal case rather than an edge case.
+--
+-- Terms are ORed instead, and ranking is left to ts_rank_cd — cover-density
+-- ranking already rewards documents that match more of the query, closer together,
+-- so precision comes from the ordering rather than from set membership.
+--
+-- Function words are dropped, because ORing them matches most of the corpus and
+-- flattens the ranking. The list is deliberately conservative: it covers only
+-- high-frequency function words in Indonesian and English, and omits anything that
+-- doubles as an entity or acronym in this corpus — "who" (WHO), "it" (IT), "us"
+-- (US), "id", "ai", "ux". Removing one of those would silently make a whole class
+-- of record unfindable, which is a worse failure than a little ranking noise.
+--
+-- Returns NULL for a query with no usable terms; callers must guard on IS NOT NULL
+-- rather than comparing the text form.
+CREATE OR REPLACE FUNCTION public.mcp_search_tsquery(p_query text)
+RETURNS tsquery
+LANGUAGE plpgsql
+STABLE
+SET search_path = public, extensions
+AS $$
+DECLARE
+  stopwords CONSTANT text[] := ARRAY[
+    -- Indonesian
+    'yang', 'dan', 'untuk', 'dengan', 'pada', 'dari', 'ini', 'itu', 'tidak',
+    'akan', 'adalah', 'dalam', 'atau', 'oleh', 'sebagai', 'juga', 'telah',
+    'serta', 'terhadap', 'melalui', 'namun', 'karena', 'saja', 'agar', 'jika',
+    'sudah', 'belum', 'masih', 'antara', 'setiap', 'para', 'kami', 'kita',
+    'mereka', 'anda', 'saya', 'seperti', 'yaitu', 'yakni', 'bahwa', 'tersebut',
+    'tentang', 'apa', 'bagaimana', 'siapa', 'mana', 'kapan', 'mengapa', 'di',
+    'ke', 'ada', 'bisa', 'dapat', 'harus', 'lebih', 'paling', 'atas', 'bawah',
+    -- English
+    'the', 'and', 'for', 'with', 'that', 'this', 'from', 'have', 'has', 'had',
+    'are', 'was', 'were', 'which', 'their', 'these', 'those', 'would', 'should',
+    'could', 'there', 'between', 'through', 'however', 'because', 'including',
+    'what', 'how', 'where', 'when', 'why', 'does', 'did', 'into', 'about',
+    'been', 'being', 'other', 'than', 'then', 'they', 'them', 'its', 'our',
+    'your', 'you', 'any', 'all', 'some', 'more', 'most', 'such', 'only', 'also',
+    'over', 'under', 'upon', 'each', 'both', 'per', 'via', 'not', 'but', 'is'
+  ];
+  norm text;
+  terms text[];
+  kept text[];
+BEGIN
+  norm := lower(extensions.unaccent(btrim(COALESCE(p_query, ''))));
+  IF norm = '' THEN
+    RETURN NULL;
+  END IF;
+
+  -- Splitting on non-alphanumerics also sanitises the input: every surviving token
+  -- is [a-z0-9]+, so it can be handed to to_tsquery without escaping.
+  SELECT array_agg(DISTINCT t) INTO terms
+  FROM (SELECT unnest(regexp_split_to_array(norm, '[^a-z0-9]+')) AS t) s
+  WHERE length(t) >= 2;
+
+  IF terms IS NULL OR cardinality(terms) = 0 THEN
+    RETURN NULL;
+  END IF;
+
+  SELECT array_agg(t) INTO kept FROM unnest(terms) AS t WHERE NOT (t = ANY (stopwords));
+
+  -- A query made entirely of function words ("apa itu", "what is this") still has
+  -- to return something, so fall back to the unfiltered terms.
+  IF kept IS NULL OR cardinality(kept) = 0 THEN
+    kept := terms;
+  END IF;
+
+  RETURN to_tsquery('simple', array_to_string(kept, ' | '));
+END;
+$$;
+
+REVOKE ALL ON FUNCTION public.mcp_search_tsquery(text) FROM PUBLIC;
+
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'mcp_reader') THEN
+    GRANT EXECUTE ON FUNCTION public.mcp_search_tsquery(text) TO mcp_reader;
+  END IF;
+END;
+$$;
+
+-- ---------------------------------------------------------------------------
 -- search_corpus
 -- ---------------------------------------------------------------------------
 
@@ -76,7 +169,7 @@ BEGIN
     ELSE p_types
   END;
   q_norm := extensions.unaccent(btrim(p_query));
-  q := plainto_tsquery('simple', q_norm);
+  q := public.mcp_search_tsquery(p_query);
 
   -- Confidential deliverables stay out of the result set unless the caller
   -- explicitly opts in. The MCP server only passes true when the request carried
@@ -238,7 +331,7 @@ BEGIN
       AND (p_year_from IS NULL OR r.year >= p_year_from)
       AND (p_year_to IS NULL OR r.year <= p_year_to)
       AND (
-        (q::text <> '' AND to_tsvector('simple', extensions.unaccent(r.body)) @@ q)
+        (q IS NOT NULL AND to_tsvector('simple', extensions.unaccent(r.body)) @@ q)
         OR extensions.unaccent(lower(r.title)) LIKE '%' || lower(q_norm) || '%'
         OR extensions.unaccent(lower(r.body)) LIKE '%' || lower(q_norm) || '%'
       )
@@ -354,7 +447,7 @@ BEGIN
       ON c.source_table = doc.source_table
      AND c.document_id = doc.document_id
     WHERE
-      (q::text <> '' AND c.content_tsv @@ q)
+      (q IS NOT NULL AND c.content_tsv @@ q)
       OR extensions.unaccent(lower(doc.title)) LIKE '%' || lower(q_norm) || '%'
       OR extensions.unaccent(lower(c.content)) LIKE '%' || lower(q_norm) || '%'
     ORDER BY doc.doc_key, score DESC, c.chunk_index ASC
@@ -407,7 +500,7 @@ BEGIN
           AND c.document_id = doc.document_id
       )
       AND (
-        (q::text <> ''
+        (q IS NOT NULL
           AND to_tsvector('simple', extensions.unaccent(COALESCE(doc.search_text, ''))) @@ q)
         OR extensions.unaccent(lower(doc.title)) LIKE '%' || lower(q_norm) || '%'
       )
@@ -487,7 +580,7 @@ BEGIN
 
   lim := GREATEST(1, LEAST(COALESCE(p_result_limit, 10), 30));
   q_norm := extensions.unaccent(btrim(p_query));
-  q := plainto_tsquery('simple', q_norm);
+  q := public.mcp_search_tsquery(p_query);
   allowed_conf := CASE
     WHEN COALESCE(p_include_confidential, false)
       THEN ARRAY['public', 'internal', 'confidential']
@@ -553,7 +646,7 @@ BEGIN
       OR (doc.prefix = want_prefix AND doc.document_id::text = want_id)
     )
     AND (
-      (q::text <> '' AND c.content_tsv @@ q)
+      (q IS NOT NULL AND c.content_tsv @@ q)
       OR extensions.unaccent(lower(c.content)) LIKE '%' || lower(q_norm) || '%'
     )
   ORDER BY 9 DESC, c.chunk_index ASC

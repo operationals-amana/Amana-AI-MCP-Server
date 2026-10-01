@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AMANA AI Knowledge Search — Quality Report</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm 16mm 16mm; }
+
+  :root {
+    --ink: #1a1a1a;
+    --soft: #5c5c5c;
+    --line: #dcdcdc;
+    --accent: #1f5c4a;
+    --good-bg: #eef6f1;
+    --warn-bg: #fdf4e8;
+    --bad-bg: #fbeeee;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 10.5pt;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 21pt;
+    line-height: 1.2;
+    margin: 0 0 2mm;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 13pt;
+    margin: 9mm 0 3mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 { font-size: 11pt; margin: 5mm 0 1.5mm; }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+  li { margin-bottom: 1.5mm; }
+
+  .subtitle { color: var(--soft); font-size: 10pt; margin-bottom: 1mm; }
+  .meta { color: var(--soft); font-size: 9pt; border-top: 1px solid var(--line); padding-top: 2mm; }
+
+  .bottomline {
+    background: var(--good-bg);
+    border-left: 4px solid var(--accent);
+    padding: 4mm 5mm;
+    margin: 5mm 0 7mm;
+  }
+  .bottomline p:last-child { margin-bottom: 0; }
+  .bottomline strong { color: var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 3mm 0 4mm; font-size: 9.5pt; }
+  th, td { padding: 2mm 2.5mm; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+  thead th { background: #f4f4f4; font-weight: 600; border-bottom: 1.5px solid #bbb; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .now { font-weight: 700; color: var(--accent); }
+  .was { color: var(--soft); }
+
+  .metric {
+    border: 1px solid var(--line);
+    border-radius: 2mm;
+    padding: 3.5mm 4mm;
+    margin-bottom: 3mm;
+    page-break-inside: avoid;
+  }
+  .metric h3 { margin: 0 0 1mm; }
+  .metric .plain { color: var(--soft); font-size: 9.5pt; margin-bottom: 1.5mm; }
+  .metric .score {
+    display: inline-block;
+    background: var(--good-bg);
+    color: var(--accent);
+    font-weight: 700;
+    padding: 0.7mm 2.5mm;
+    border-radius: 1mm;
+    font-size: 9.5pt;
+  }
+  .metric p:last-child { margin-bottom: 0; }
+
+  .flag { padding: 3mm 4mm; border-radius: 2mm; margin-bottom: 3mm; page-break-inside: avoid; }
+  .flag h3 { margin-top: 0; }
+  .flag p:last-child { margin-bottom: 0; }
+  .flag.high { background: var(--bad-bg); border-left: 4px solid #a33; }
+  .flag.med  { background: var(--warn-bg); border-left: 4px solid #b8860b; }
+
+  .avoid-break { page-break-inside: avoid; }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<p class="subtitle">AMANA Solutions · Internal quality report</p>
+<h1>How well does AMANA&nbsp;AI find our own knowledge?</h1>
+<p class="subtitle">Testing and improving the knowledge search that AMANA AI uses to answer questions · 30 September 2026</p>
+
+<div class="bottomline">
+  <p><strong>The bottom line.</strong> When we started measuring, the knowledge search was returning
+  <strong>no results at all</strong> for essentially every realistic question a colleague would ask. It looked
+  like it was working, but it was not.</p>
+  <p>It now finds the correct source among the first ten results <strong>92% of the time</strong>, and puts it
+  in first place more than half the time. For our reports and studies specifically, it finds the right
+  document <strong>100% of the time</strong>. Questions asked in Indonesian now find English documents and
+  vice versa, which previously failed completely.</p>
+  <p>Three things still need attention, listed near the end. The most important is that the system cannot yet
+  tell the difference between "I found the answer" and "I found something vaguely related" — so it never
+  says "I don't know".</p>
+</div>
+
+<h2>What we actually tested</h2>
+
+<p>We built a set of <strong>100 test questions</strong> drawn directly from AMANA's own material — our reports,
+studies, staff profiles, past projects and partner contacts. For each question we recorded which document or
+record genuinely contains the answer, so we can check whether the search finds it.</p>
+
+<p>The questions were written to resemble what colleagues actually type, not keyword searches. They were
+deliberately reworded so they do not copy phrasing from the source — otherwise we would only be testing
+word-matching, not whether the system understands the question.</p>
+
+<table>
+  <thead>
+    <tr><th>What the set contains</th><th class="num">Questions</th><th>Why it is there</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Questions about our reports and studies</td><td class="num">70</td><td>Spread so every one of our 35 documents is covered, not just the largest</td></tr>
+    <tr><td>Questions about staff, partners and past projects</td><td class="num">15</td><td>Search covers these too, and they behave very differently</td></tr>
+    <tr><td>Questions our knowledge <em>cannot</em> answer</td><td class="num">15</td><td>To check the system admits it has nothing, instead of guessing</td></tr>
+  </tbody>
+</table>
+
+<p>Half the questions are in English and half in Indonesian, balanced across every category. Twenty of them
+deliberately ask in one language about a document written in the other — a realistic situation for us, and one
+the old search handled very badly.</p>
+
+<h2>The results</h2>
+
+<p>Three points in time: where we started, after a first repair, and where it stands today. Every figure is
+measured against the same 100 questions, so the comparison is fair. Each measure is explained in the next
+section.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>What we measure</th>
+      <th class="num">At the start</th>
+      <th class="num">After first fix</th>
+      <th class="num">Today</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Searches that returned nothing at all</td>
+      <td class="num was">100%</td><td class="num was">0%</td><td class="num now">0%</td>
+    </tr>
+    <tr>
+      <td>Correct source shown <strong>first</strong></td>
+      <td class="num was">0%</td><td class="num was">25%</td><td class="num now">54%</td>
+    </tr>
+    <tr>
+      <td>Correct source in the <strong>top three</strong></td>
+      <td class="num was">0%</td><td class="num was">52%</td><td class="num now">75%</td>
+    </tr>
+    <tr>
+      <td>Correct source in the <strong>top ten</strong></td>
+      <td class="num was">0%</td><td class="num was">71%</td><td class="num now">92%</td>
+    </tr>
+    <tr>
+      <td>Typical position score (0 to 1)</td>
+      <td class="num was">0.00</td><td class="num was">0.40</td><td class="num now">0.67</td>
+    </tr>
+    <tr>
+      <td>Questions crossing between Indonesian and English</td>
+      <td class="num was">0%</td><td class="num was">40%</td><td class="num now">100%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>What each measure means</h2>
+
+<div class="metric">
+  <h3>Searches that returned nothing at all <span class="was">(technical name: zero-hit rate)</span></h3>
+  <p class="plain">Out of every 100 searches, how many came back completely empty?</p>
+  <p>This is a health check rather than a quality measure — it does not ask whether the answer was
+  <em>right</em>, only whether anything came back. At the start this was <strong>100%</strong>: the search
+  demanded that every single word of a question appear in one document, which almost never happens in a real
+  sentence. It is now <span class="score">0%</span>. Anything above zero here means something is broken, not
+  merely imperfect.</p>
+</div>
+
+<div class="metric">
+  <h3>Correct source shown first <span class="was">(recall@1)</span></h3>
+  <p class="plain">How often is the very first result the right one?</p>
+  <p>This matters because AMANA AI pays most attention to the first result, and sometimes opens only that one.
+  Now <span class="score">54%</span> — up from nothing. This is the measure with the most room left to
+  improve: the right document is usually retrieved, but not always placed at the top.</p>
+</div>
+
+<div class="metric">
+  <h3>Correct source in the top three <span class="was">(recall@3)</span></h3>
+  <p class="plain">How often does the right answer appear among the first three results?</p>
+  <p>A realistic picture of what AMANA AI reads carefully before answering.
+  Now <span class="score">75%</span>.</p>
+</div>
+
+<div class="metric">
+  <h3>Correct source in the top ten <span class="was">(recall@10)</span></h3>
+  <p class="plain">How often does the right answer appear anywhere in the returned results?</p>
+  <p><strong>This is the single most important figure in the report.</strong> If the right document is never
+  retrieved, AMANA AI cannot possibly base its answer on it — no amount of clever wording or model improvement
+  can recover information that was never found. This number is therefore a hard ceiling on how reliable any
+  answer can be.</p>
+  <p>Now <span class="score">92%</span>. In plain terms: for roughly 8 questions in 100 the right source is
+  still missed, and for those the answer cannot be trusted regardless of how confident it sounds.</p>
+</div>
+
+<div class="metric">
+  <h3>Typical position score <span class="was">(MRR, or Mean Reciprocal Rank)</span></h3>
+  <p class="plain">A single number between 0 and 1 summarising how near the top the right answer usually sits.</p>
+  <p>It works by scoring each question by the position of the correct result — first place scores 1.00, second
+  place 0.50, third 0.33, tenth 0.10, and not found at all scores 0 — then averaging across all questions.
+  A score of 1.00 would mean the right answer is always first; 0 would mean it is never found.</p>
+  <p>Now <span class="score">0.67</span>, from 0.00. This is the best single figure to track month to month,
+  because it moves both when the system finds more answers <em>and</em> when it ranks them better. The other
+  measures can each stay flat while quality quietly drifts.</p>
+</div>
+
+
+
+<h2>The biggest single improvement: our two languages now work together</h2>
+
+<p>AMANA's knowledge is a mix of Indonesian and English documents, and colleagues ask questions in both
+languages. Previously the search compared questions to documents purely by matching words. An Indonesian
+question and an English report share almost no words, so those searches failed almost entirely — they
+succeeded 0% of the time at the start, and still only 40% after the first repair.</p>
+
+<p>The search now also compares questions and documents <strong>by meaning</strong>, not just by wording, using
+a method that works across both languages. Cross-language questions now succeed
+<strong>100% of the time</strong> in our test set.</p>
+
+<p>In practice this means a colleague can ask in Bahasa Indonesia and still be pointed to the right English
+report — and the reverse. Given how our material is split, this was a substantial blind spot.</p>
+
+<h2>How different kinds of information perform</h2>
+
+<p>Search covers five kinds of record, and they do not perform equally. This is worth knowing, because it tells
+us where to trust the system today and where to double-check it.</p>
+
+<table>
+  <thead>
+    <tr><th>Kind of record</th><th class="num">In collection</th><th class="num">Found in top ten</th><th>Assessment</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Reports, studies and other documents</td><td class="num">35</td><td class="num now">100%</td><td>Reliable. This is the bulk of our knowledge.</td></tr>
+    <tr><td>Past projects</td><td class="num">10</td><td class="num now">100%</td><td>Reliable.</td></tr>
+    <tr><td>Internal knowledge notes</td><td class="num">8</td><td class="num now">100%</td><td>Reliable.</td></tr>
+    <tr><td>Staff profiles and expertise</td><td class="num">104</td><td class="num">50%</td><td>Improves to 100% when the question is aimed specifically at people — see below.</td></tr>
+    <tr><td>Partner and contact organisations</td><td class="num">220</td><td class="num">0%</td><td>Does not work. This is a data problem, not a search problem.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>On staff searches.</strong> When a question is explicitly aimed at people, the right colleague is
+found 100% of the time. The 50% figure applies when the question is open-ended, because documents are long and
+rich in words while a staff profile is short, so documents tend to fill all the available result slots. We have
+made two changes for this: reserving some result slots for people and organisations, and instructing AMANA AI
+to narrow its search when a question is clearly about staff. We expect this to improve further in real use.</p>
+
+<h2>What still needs attention</h2>
+
+<div class="flag high">
+  <h3>1. The system does not know when it does not know</h3>
+  <p>We tested 15 questions our knowledge genuinely cannot answer — about sectors and topics AMANA has no
+  material on. <strong>All 15 returned confident-looking results anyway.</strong> Nothing in the results
+  distinguishes "this is the answer" from "this is the closest thing I could find, and it is not relevant".</p>
+  <p>This is the most important remaining risk, because it is how a plausible but wrong answer reaches a
+  colleague. A proposal could be written on a claim the knowledge base never actually supported.</p>
+  <p><strong>The fix,</strong> which is next on our list: have the search report how strong its evidence is —
+  strong, moderate or weak — so AMANA AI can say "I could not find anything on this" or answer with appropriate
+  caution instead of stating it as fact. Our measurements show the underlying signal to do this already exists;
+  it simply is not being passed on yet.</p>
+</div>
+
+<div class="flag med">
+  <h3>2. Partner and contact records are too thin to search</h3>
+  <p>With 220 partner organisations, searches for them fail. The cause is not the search: most records contain
+  little more than an organisation name, an affiliation and a category. There is not enough written down to tell
+  one from another.</p>
+  <p>No amount of technical work fixes this. It needs a short description of what each organisation actually
+  does, added through the dashboard. Even one or two sentences each would make them findable.</p>
+</div>
+
+<div class="flag med">
+  <h3>3. Document details are unreliable, so sources may look wrong</h3>
+  <p>Separately from search quality, we found that the information recorded <em>about</em> our documents has
+  errors. Some examples:</p>
+  <ul>
+    <li>Several documents are dated in the future — one is recorded as 2045.</li>
+    <li>One document's title is not a title at all, but a line copied from a table of contents.</li>
+    <li>The same client appears under two different names ("Kemenkes" and "Kementerian Kesehatan"), so filtering
+      by client splits them.</li>
+    <li>Section headings quoted alongside answers are often fragments rather than real headings.</li>
+    <li>About a third of our documents have no practice group recorded.</li>
+  </ul>
+  <p>The practical effect: AMANA AI may find exactly the right passage but present it with a wrong-looking date,
+  title or heading — which makes correct answers look untrustworthy. These originate in the automatic document
+  intake process, and most cannot currently be corrected by hand because the dashboard has no screen for editing
+  these records.</p>
+</div>
+
+<h2>What happens next</h2>
+
+<ol>
+  <li><strong>Teach the system to say "I don't know."</strong> Report evidence strength with every search so
+    weak matches are flagged rather than presented as fact. Highest priority.</li>
+  <li><strong>Enrich the partner records</strong> with a sentence or two describing each organisation.</li>
+  <li><strong>Correct the document details</strong> — dates, titles, client names — and add a dashboard screen
+    so they can be maintained going forward.</li>
+  <li><strong>Improve first-place accuracy</strong> from 54%. The right document is nearly always found; the
+    remaining work is ordering results better.</li>
+  <li><strong>Begin measuring the answers themselves,</strong> not just the search. Now that the right sources
+    are reliably retrieved, we can start scoring whether AMANA AI's written answers are properly supported by
+    them, and build the quality dashboard on top of that.</li>
+</ol>
+
+<h2>A note on how this was measured</h2>
+
+<p>Everything in this report is measured, not estimated. The same 100 questions are used every time, the test
+is repeatable on demand, and it can be re-run in under a minute without cost. That means any future change to
+the search can be checked against these figures before it reaches colleagues, rather than being judged by
+impression.</p>
+
+<p>Two honest limitations. First, 100 questions is a solid sample but not a large one — the figures for staff,
+partners and past projects rest on only a few questions each and should be treated as indicative. Second, these
+questions were generated from our own documents, which means they test whether the system can find material it
+holds; they cannot tell us what colleagues will ask that we have no material for at all.</p>
+
+<p class="meta">Prepared for AMANA Solutions · Detailed technical findings, including the full method and the
+complete list of data quality issues, are recorded in the engineering report (<em>eval/REPORT.md</em>) in the
+AMANA AI MCP Server repository.</p>
+
+</body>
+</html>

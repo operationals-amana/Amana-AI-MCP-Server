@@ -1,0 +1,3003 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-29T22:34:19.880Z",
+    "seed": 20260930,
+    "generatorModel": "claude-opus-5",
+    "generatorEffort": "low",
+    "plan": {
+      "targeted_document": 45,
+      "broad_document": 25,
+      "entity": 15,
+      "unanswerable": 15
+    },
+    "counts": {
+      "total": 100,
+      "byBucket": {
+        "targeted_document": 45,
+        "broad_document": 25,
+        "entity": 15,
+        "unanswerable": 15
+      },
+      "byLanguage": {
+        "en": 50,
+        "id": 50
+      },
+      "crossLingual": 20,
+      "distinctDocumentsCovered": 34,
+      "documentsInCorpus": 35
+    },
+    "failures": [],
+    "notes": [
+      "Reference-free: items carry retrieval ground truth, not gold answers.",
+      "answerSketch is a reviewer hint. Never score a response against it.",
+      "Negatives flagged suspect_answerable should be reviewed before use as negatives."
+    ]
+  },
+  "items": [
+    {
+      "id": "amana-eval-001",
+      "bucket": "targeted_document",
+      "question": "In change management for a large government financial system rollout, how should we tailor our response depending on whether stakeholders are unaware, lack capability, or are actively resistant?",
+      "answerSketch": "The material distinguishes three resistance categories: unknowing stakeholders need communications to build awareness of what they must do; unable stakeholders need training and workplace support to build skills and knowledge; unwilling stakeholders require communications, sanctions, negotiation, persuasion and confrontation on specific issues.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:05e4126c-edc9-4a25-b332-a8a53c29edca",
+        "recordType": "document",
+        "chunkId": "819",
+        "chunkIndex": 17,
+        "heading": "PHASE",
+        "pageFrom": 19,
+        "pageTo": 22,
+        "documentTitle": "Strategi Implementasi dan Monev",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2026,
+        "sourceUrl": "https://drive.google.com/file/d/138RBjqRJ2b43bPbrNujmKSsGsxR8sTZp/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.746,
+        "tokenEstimate": 380
+      }
+    },
+    {
+      "id": "amana-eval-002",
+      "bucket": "targeted_document",
+      "question": "Bagaimana proses penyusunan panduan pelayanan publik berorientasi warga ini dilakukan, dan pihak mana yang memberi dukungan kolaborasi?",
+      "answerSketch": "Disusun melalui riset dan pengembangan mendalam, diskusi lintas sektor dengan regulator dan pelaksana daerah, serta memahami perspektif masyarakat lewat pendekatan siklus hidup; dukungan datang dari PROSPERA (kata pengantar Deputi Bidang Pelayanan Publik Kementerian PANRB).",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:07a642e4-f693-450d-aab8-bdafdecfad81",
+        "recordType": "document",
+        "chunkId": "1317",
+        "chunkIndex": 10,
+        "heading": "2026. Human-Centred Public Services Playbook",
+        "pageFrom": 5,
+        "pageTo": 5,
+        "documentTitle": "Cetak Playbook Pelayanan Publik Berfokus pada Manusia",
+        "docType": "framework",
+        "practiceGroup": "digital",
+        "documentYear": 2026,
+        "sourceUrl": "https://drive.google.com/file/d/1lbXIU9zbgSh0P2Tk0L1zjLVNTHFYQxJH/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.813,
+        "tokenEstimate": 213
+      }
+    },
+    {
+      "id": "amana-eval-003",
+      "bucket": "targeted_document",
+      "question": "Dalam kerangka kematangan aksesibilitas kanal layanan pemerintah, apa perbedaan antara tahap penyediaan banyak kanal dan tahap kanal yang terintegrasi penuh?",
+      "answerSketch": "Pada level multi-kanal (Level 3) tersedia beragam kanal daring dan luring dengan portal terpadu sebagai rujukan tunggal, namun sistem antarkanal belum tersinkronisasi real-time; pada Level 4 (omnichannel) seluruh kanal saling terintegrasi sehingga masyarakat merasakan akses yang konsisten, terpadu, proaktif, dan inklusif.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:07a642e4-f693-450d-aab8-bdafdecfad81",
+        "recordType": "document",
+        "chunkId": "1565",
+        "chunkIndex": 258,
+        "heading": "5.2.6 Aksesibilitas Kanal Informasi dan Pelayanan",
+        "pageFrom": 63,
+        "pageTo": 63,
+        "documentTitle": "Cetak Playbook Pelayanan Publik Berfokus pada Manusia",
+        "docType": "framework",
+        "practiceGroup": "digital",
+        "documentYear": 2026,
+        "sourceUrl": "https://drive.google.com/file/d/1lbXIU9zbgSh0P2Tk0L1zjLVNTHFYQxJH/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.782,
+        "tokenEstimate": 424
+      }
+    },
+    {
+      "id": "amana-eval-004",
+      "bucket": "targeted_document",
+      "question": "Apa dampak tidak adanya lembaga yang berwenang menetapkan standar pengelolaan kamera pengawas di Jakarta terhadap pengadaan dan integrasi antar dinas?",
+      "answerSketch": "Tanpa otoritas pusat penetap standar, tiap OPD memilih vendor, perangkat, dan platform sendiri tanpa mempertimbangkan interoperabilitas kota, sehingga fragmentasi teknologi menguat dan biaya jangka panjang membesar; Command Center pun tidak punya posisi strategis sebagai agregator data lintas sektor.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:0e3e7070-079c-48c9-8fb5-701fb1fc1459",
+        "recordType": "document",
+        "chunkId": "2967",
+        "chunkIndex": 101,
+        "heading": "1.5.2 Permasalahan Kelembagaan",
+        "pageFrom": 26,
+        "pageTo": 27,
+        "documentTitle": "1.1.1.   Konteks Perkembangan DKI Jakarta sebagai Kota Global .................................................................. 4",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ry_zqdff1DHYPjoErJpbbBPGNUMX8zqd/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.963,
+        "tokenEstimate": 395
+      }
+    },
+    {
+      "id": "amana-eval-005",
+      "bucket": "targeted_document",
+      "question": "Apa saja kendala operasional dan pemeliharaan kamera pengawas di Jakarta yang ditemukan dari wawancara dengan petugas pemantau, termasuk isu ketergantungan pada pemantauan manual dan tidak adanya pemeriksaan kondisi perangkat secara otomatis?",
+      "answerSketch": "Temuan lapangan menyebut pengawasan masih bergantung pada petugas yang mengamati layar sehingga rawan kelelahan dan kejadian terlewat; anggaran dan mekanisme perawatan berkala tidak terstruktur di semua OPD; tidak ada health-check otomatis sehingga downtime tak terdeteksi; ditambah penempatan kamera terhalang, standar pemasangan tidak seragam, dan kerawanan vandalisme/pencurian.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:0e3e7070-079c-48c9-8fb5-701fb1fc1459",
+        "recordType": "document",
+        "chunkId": "2908",
+        "chunkIndex": 42,
+        "heading": "Temuan lapangan dan diskusi dengan operator menunjukkan bahwa tantangan operasional tidak hanya berkaitan",
+        "pageFrom": 9,
+        "pageTo": 9,
+        "documentTitle": "1.1.1.   Konteks Perkembangan DKI Jakarta sebagai Kota Global .................................................................. 4",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ry_zqdff1DHYPjoErJpbbBPGNUMX8zqd/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.963,
+        "tokenEstimate": 371
+      }
+    },
+    {
+      "id": "amana-eval-006",
+      "bucket": "targeted_document",
+      "question": "What are the main policy priorities of Indonesia's 2025-2029 health sector master plan, and how does it relate to the national medium-term development plan?",
+      "answerSketch": "The health master plan translates the RPJMN 2025-2029 health policy direction into operational form, focusing on improving service quality, reducing disparities, strengthening primary care access in remote and border areas, bolstering disease surveillance and lab/outbreak response capacity, tackling malnutrition and stunting, and using data- and IT-driven implementation, with support from local government, private sector and communities.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:1f2831d8-790d-4ad9-9367-8959bbba7c94",
+        "recordType": "document",
+        "chunkId": "2449",
+        "chunkIndex": 10,
+        "heading": "1.1 Rencana Induk Bidang Kesehatan (RIBK) 2025-2029: Masyarakat yang",
+        "pageFrom": 3,
+        "pageTo": 4,
+        "documentTitle": "AMANA WIP teknokratik RIBK 20250327",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1C7VwMFJQyvyNZP8jq6M0Re63KqcKAhn5/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.958,
+        "tokenEstimate": 374
+      }
+    },
+    {
+      "id": "amana-eval-007",
+      "bucket": "targeted_document",
+      "question": "What do the data say about physical inactivity in Indonesia — the share of adults not getting enough exercise and how Indonesians' daily step counts compare internationally?",
+      "answerSketch": "About 43.5% of Indonesian adults are insufficiently physically active (SDKI 2023), and Indonesians average roughly 3,500 steps per day — the lowest among all countries studied by Althoff et al. (2017). This sedentary pattern is linked to obesity, cardiovascular disease, and mental health problems.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:1f2831d8-790d-4ad9-9367-8959bbba7c94",
+        "recordType": "document",
+        "chunkId": "2496",
+        "chunkIndex": 57,
+        "heading": "2.1.2 Komunitas Gaya Hidup Sehat",
+        "pageFrom": 17,
+        "pageTo": 18,
+        "documentTitle": "AMANA WIP teknokratik RIBK 20250327",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1C7VwMFJQyvyNZP8jq6M0Re63KqcKAhn5/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.934,
+        "tokenEstimate": 420
+      }
+    },
+    {
+      "id": "amana-eval-008",
+      "bucket": "targeted_document",
+      "question": "In AMANA's internal career levelling framework, how do the expectations differ between someone with 4-6 years of experience and someone at the 6-10 year band?",
+      "answerSketch": "Mid-career staff (4-6 years) are expected to apply critical evaluation — judging the quality and efficiency of work, not just executing it, in lead/coordinator roles — while the 6-10 year managerial band shifts from doing to supervising, requiring project management, people coordination and cross-functional coordination.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:22305f34-c4bc-49a0-a13f-451d0baff271",
+        "recordType": "document",
+        "chunkId": "537",
+        "chunkIndex": 55,
+        "heading": "Evaluation\" skills, not just",
+        "pageFrom": 39,
+        "pageTo": 41,
+        "documentTitle": "250526 | AMANA Career Grading",
+        "docType": "research_report",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1WYvzANJv_EVGt5ev6nt3hLmBzibAEB4kgJRUGJ84oCE/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.911,
+        "tokenEstimate": 403
+      }
+    },
+    {
+      "id": "amana-eval-009",
+      "bucket": "targeted_document",
+      "question": "What prior Ministry of Health–validated digital health work does AMANA cite to justify its credibility for an AI-in-health initiative, and what complementary role does its foundation partner play?",
+      "answerSketch": "AMANA points to the SATUSEHAT health workforce (SDMK) roadmap delivered for WHO Indonesia and the DHTS 2.0 digital health transformation strategy, both validated at Directorate General level; Rabu Biru Foundation brings the government mandate, programme authority, and institutional relationships to scale a pilot into national policy.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:2231e0bc-804e-4248-a39b-8a1bcfb8e8f0",
+        "recordType": "document",
+        "chunkId": "939",
+        "chunkIndex": 25,
+        "heading": "monitoring, and optimising the distribution of medicines and vaccines. The",
+        "pageFrom": 7,
+        "pageTo": 7,
+        "documentTitle": "AMANA Agentic State in Health Concept Note Proposal",
+        "docType": "concept_note",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/document/d/1K94OQsK17CvcpAFrVJ4p6cPjizmkw9PW/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.95,
+        "tokenEstimate": 354
+      }
+    },
+    {
+      "id": "amana-eval-010",
+      "bucket": "targeted_document",
+      "question": "What institutional and capacity weaknesses commonly hold back regional revenue agencies in managing local taxes, and what are their consequences?",
+      "answerSketch": "Issues include outdated/inaccurate property tax data (ownership changes, fictitious objects, NJOP below market), fragmented coordination between the revenue agency and the regional finance body causing inaccurate financial reports, absent or unfollowed documented collection SOPs leaving processes dependent on individuals, and no unit owning the transformation agenda so reform only happens under external pressure such as audits or the head of region.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:24ff126d-4f80-4704-ba27-d85fb176dc22",
+        "recordType": "document",
+        "chunkId": "787",
+        "chunkIndex": 46,
+        "heading": "AMANA",
+        "pageFrom": 27,
+        "pageTo": 27,
+        "documentTitle": "Navigasi Perubahan yang Berkelanjutan",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/15PWMIkjyxitv1C1LZPdURXAAzwlrCtUk/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.952,
+        "tokenEstimate": 401
+      }
+    },
+    {
+      "id": "amana-eval-011",
+      "bucket": "targeted_document",
+      "question": "Why does stakeholder mapping matter in public sector reform, and what makes resistance from mid-level officials especially dangerous?",
+      "answerSketch": "Stakeholders have differing interests and incentives — apparent resistance often signals unaddressed interests in the policy design; a single unengaged high-authority official can halt a process while the right champion accelerates it; positions shift over time so maps need periodic updating; and a blueprint must explicitly show how critical stakeholder interests are addressed. The deadliest resistance comes not from the bottom but from middle management who feel threatened.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:24ff126d-4f80-4704-ba27-d85fb176dc22",
+        "recordType": "document",
+        "chunkId": "758",
+        "chunkIndex": 17,
+        "heading": "AMANA",
+        "pageFrom": 10,
+        "pageTo": 11,
+        "documentTitle": "Navigasi Perubahan yang Berkelanjutan",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/15PWMIkjyxitv1C1LZPdURXAAzwlrCtUk/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.922,
+        "tokenEstimate": 358
+      }
+    },
+    {
+      "id": "amana-eval-012",
+      "bucket": "targeted_document",
+      "question": "Dalam penawaran platform analitik enterprise untuk perusahaan multifinance, berapa rata-rata tingkat pengembalian investasi yang diklaim vendor dan dalam jangka waktu berapa lama?",
+      "answerSketch": "Vendor mengklaim platform tersebut telah dipakai lebih dari 50 perusahaan dengan rata-rata ROI 250% dalam 18 bulan.",
+      "questionType": "factual",
+      "difficulty": "easy",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:27505de4-2a14-433c-8df0-a7553d5810ca",
+        "recordType": "document",
+        "chunkId": "1799",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "Enterprise Data Analytics & Business Intelligence",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1QNubGfduMpagU_PEGY8N6wyQ78FKaNKR/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.74,
+        "tokenEstimate": 146
+      }
+    },
+    {
+      "id": "amana-eval-013",
+      "bucket": "targeted_document",
+      "question": "Apa perbedaan asumsi tentang perilaku pemerintah daerah antara teori federalisme fiskal klasik (Tiebout, Musgrave, Oates) dengan pendekatan generasi kedua dan public choice dalam kerangka penyusunan Theory of Change?",
+      "answerSketch": "Teori klasik fokus pada pembagian tugas belanja dan kewenangan pendapatan antar level pemerintahan (penugasan belanja dulu, baru pembiayaan), sementara generasi kedua/public choice tidak mengasumsikan pemerintah benevolen melainkan aktor strategis berkepentingan sendiri, sehingga aturan fiskal membentuk insentif yang memengaruhi pola belanja dan perilaku daerah.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": true,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:30c2c437-88b4-43f6-b1c1-203473375738",
+        "recordType": "document",
+        "chunkId": "854",
+        "chunkIndex": 9,
+        "heading": "3 Lapis Paradigma",
+        "pageFrom": 10,
+        "pageTo": 11,
+        "documentTitle": "Membangun Solusi yang Tepat Sasaran",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1GkXRCtID-bskTv_wqpiGvGUFMnYlytop/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.785,
+        "tokenEstimate": 378
+      }
+    },
+    {
+      "id": "amana-eval-014",
+      "bucket": "targeted_document",
+      "question": "In the SPAN rollout, how did stakeholder engagement differ between senior management and accounts payable staff across the project phases?",
+      "answerSketch": "Senior management (high influence/interest/impact) were engaged via kick-off meetings, budget and resource approval, monthly progress reports, involvement in key decisions, bi-weekly status reviews and post-implementation performance reviews; AP staff (medium influence, high interest/impact) got awareness sessions, sandbox/UAT participation, in-depth training on invoice processing and system use, extra support during early use, regular feedback check-ins and tracking of processing times and error rates.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:47ce5671-1e10-4ce6-a4a8-58076900961a",
+        "recordType": "document",
+        "chunkId": "581",
+        "chunkIndex": 39,
+        "heading": "SPAN",
+        "pageFrom": 56,
+        "pageTo": 56,
+        "documentTitle": "Strategi Implementasi dan Monev",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2026,
+        "sourceUrl": "https://docs.google.com/document/d/16-ALcHVFkreXgHXZYq24u2h35e75PjEOM0ixWBb7uQw/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.915,
+        "tokenEstimate": 410
+      }
+    },
+    {
+      "id": "amana-eval-015",
+      "bucket": "targeted_document",
+      "question": "Platform kota cerdas terpadu yang ditawarkan SolTech untuk Pemkot Bandung mencakup domain apa saja, dan berapa peningkatan efisiensi layanan publik yang diklaim dari implementasi sebelumnya?",
+      "answerSketch": "CityHubX mencakup smart mobility, smart environment, smart economy, dan smart governance; sudah diterapkan di 5 kota di Indonesia dengan peningkatan efisiensi pelayanan publik hingga 40% serta naiknya skor kepuasan warga.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:495cae71-7c68-43ff-b92d-3101ba81c7d3",
+        "recordType": "document",
+        "chunkId": "1768",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "Integrated Smart City Platform — Metropolitan Government",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1LP1ZCetcrza4Ho4pbi7qH69zeDhvqin3/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.713,
+        "tokenEstimate": 152
+      }
+    },
+    {
+      "id": "amana-eval-016",
+      "bucket": "targeted_document",
+      "question": "Who in the Digital practice contributed to developing authorship guidelines for AI-generated creative works in Indonesia, and what tasks did they personally handle?",
+      "answerSketch": "An advisor logged work on a human authorship framework for Indonesia's AI-enabled creative economy: reviewing AI and copyright policy, benchmarking international approaches, supporting stakeholder consultations, and synthesizing findings into draft guidelines, using policy research and comparative analysis.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:4a39d7f1-13f6-442a-aeaa-4a4b3b25bc85",
+        "recordType": "document",
+        "chunkId": "480",
+        "chunkIndex": 2,
+        "heading": "CISDI",
+        "pageFrom": 2,
+        "pageTo": 4,
+        "documentTitle": "PG Digital Project Experience Input",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1YLCJw8Gf1iRrJLMZ8RD7tMFLx0rDZ6fFuaq4HlqRz-4/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.904,
+        "tokenEstimate": 411
+      }
+    },
+    {
+      "id": "amana-eval-017",
+      "bucket": "targeted_document",
+      "question": "Apa saja tugas Data Champion di tiap direktorat Ditjen SDMK dalam tata kelola data SATUSEHAT?",
+      "answerSketch": "Data Champion berperan memastikan tata kelola data di tiap unit: menyusun daftar data dengan kategori prioritas, mengumpulkan dan memproduksi data sesuai periode dan standar, memberi masukan penyusunan standar data, menjadi PIC berbagi pakai data, serta merekomendasikan akses segmen data bagi tingkatan pengguna tertentu.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": true,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:5214b82e-12eb-4790-a3b3-0a3ad81cdd5a",
+        "recordType": "document",
+        "chunkId": "4761",
+        "chunkIndex": 610,
+        "heading": "1. Data Champion ~ turunan kegiatan Peta Jalan tema 3: Kapasitas SDM",
+        "pageFrom": 143,
+        "pageTo": 143,
+        "documentTitle": "Peta Jalan SATUSEHATSDMK 2025 2029",
+        "docType": "technical_document",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1mKrhC142YVJovTjPnjvsTdsNch8Zpr1c/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.712,
+        "tokenEstimate": 395
+      }
+    },
+    {
+      "id": "amana-eval-018",
+      "bucket": "targeted_document",
+      "question": "What service availability and user satisfaction targets are set for the health workforce digital platform under the Ministry of Health's 2025-2029 roadmap, and which units are accountable for them?",
+      "answerSketch": "Targets include maintaining 99.9% SLA compliance annually, an average customer satisfaction score of 85% each quarter, and keeping accesses flagged as threats at no more than 25%, with threat-detection features in place; responsibility sits with Pusdatin/TTO and the data unit of the health workforce directorate general.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:5214b82e-12eb-4790-a3b3-0a3ad81cdd5a",
+        "recordType": "document",
+        "chunkId": "4640",
+        "chunkIndex": 489,
+        "heading": "INDIKATOR KEBERHASILAN",
+        "pageFrom": 119,
+        "pageTo": 119,
+        "documentTitle": "Peta Jalan SATUSEHATSDMK 2025 2029",
+        "docType": "technical_document",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1mKrhC142YVJovTjPnjvsTdsNch8Zpr1c/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.719,
+        "tokenEstimate": 197
+      }
+    },
+    {
+      "id": "amana-eval-019",
+      "bucket": "targeted_document",
+      "question": "Why does Indonesia's copyright registration process at DJKI fail to screen out AI-generated material that lacks human authorship?",
+      "answerSketch": "Because registration is declarative: the POP HC system issues certificates after only a formalities check and fee payment, without assessing human contribution, originality, protectability or similarity to existing works — so a certificate does not confer protection on otherwise unprotectable material, even though Law No. 28/2014 requires a human origin.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:573a8084-512f-406b-9fab-51f227cd3984",
+        "recordType": "document",
+        "chunkId": "951",
+        "chunkIndex": 10,
+        "heading": "Background",
+        "pageFrom": 3,
+        "pageTo": 4,
+        "documentTitle": "AMANA's Suggestion Policy Brief",
+        "docType": "policy_brief",
+        "practiceGroup": "digital",
+        "documentYear": 2029,
+        "sourceUrl": "https://docs.google.com/document/d/1p-XIX9t8PA1txsfQ0_Sm48Zq_K_lMtsl/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.929,
+        "tokenEstimate": 349
+      }
+    },
+    {
+      "id": "amana-eval-020",
+      "bucket": "targeted_document",
+      "question": "Apa saja butir yang disarankan masuk dalam checklist penilaian usulan investasi kesehatan digital sebelum anggaran disetujui?",
+      "answerSketch": "Checklist mencakup pencatatan sumber dana (APBN, DAK, APBD, JKN/BPJS-K, donor), pemisahan capex/opex/pengembangan kapabilitas, penandaan usulan sebagai 'Kesehatan Digital', pemeriksaan clearance TIK/SPBE sebelum DIPA terbit serta ketepatan KRO/RO dan akun belanja, dan pengaturan keberlanjutan agar dana donor diarahkan ke infrastruktur bukan biaya operasional.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:5804bb61-465d-4539-ab83-2fc2bb3940d5",
+        "recordType": "document",
+        "chunkId": "1159",
+        "chunkIndex": 30,
+        "heading": "CHECKLIST",
+        "pageFrom": 8,
+        "pageTo": 9,
+        "documentTitle": "LANSKAP PERENCANAAN, PEMBIAYAAN, DAN PENGANGGARAN KESEHATAN DIGITAL DI INDONESIA",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2029,
+        "sourceUrl": "https://docs.google.com/presentation/d/1WtVQEk1PEy2AQA9ceuF46hHAzujIz4y4/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.777,
+        "tokenEstimate": 278
+      }
+    },
+    {
+      "id": "amana-eval-021",
+      "bucket": "targeted_document",
+      "question": "Untuk proposal SIMRS ke RSUD Kota Surabaya, modul apa saja yang ditawarkan dan sudah terhubung dengan sistem nasional apa?",
+      "answerSketch": "Platform MediCareX dari SolTech mencakup manajemen pasien, rekam medis elektronik, manajemen farmasi, dan sistem informasi laboratorium; sudah sesuai standar Kemenkes serta terintegrasi dengan SISRUTE dan BPJAMSOSTEK, dan telah dipakai di 30+ rumah sakit.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:59df8f65-4c36-4d98-8a5b-5b9c80e3ff20",
+        "recordType": "document",
+        "chunkId": "1757",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "Hospital Information System — Provincial Health Network",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1CcsrSV3fXtN9Ey7CSjWXSMPk1pK1rMW0/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.768,
+        "tokenEstimate": 182
+      }
+    },
+    {
+      "id": "amana-eval-022",
+      "bucket": "targeted_document",
+      "question": "Mengapa pemetaan sumber dan penggunaan dana untuk kesehatan digital di Indonesia sulit dilakukan, dan apa bedanya dengan sektor kesehatan secara umum?",
+      "answerSketch": "Karena kesehatan digital belum punya kerangka klasifikasi pembiayaan baku, tidak seperti sektor kesehatan umum yang memiliki National Health Accounts untuk memetakan sumber dan penggunaan dana.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:637ffca1-fde3-4c80-8c5f-9dd36e27682d",
+        "recordType": "document",
+        "chunkId": "1021",
+        "chunkIndex": 41,
+        "heading": "2.2. STRUKTUR PEMBIAYAAN KESEHATAN DIGITAL",
+        "pageFrom": 13,
+        "pageTo": 13,
+        "documentTitle": "Laporan Lanskap Perencanaan, Pembiayaan, dan Penganggaran Kesehatan Digital di Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2029,
+        "sourceUrl": "https://drive.google.com/file/d/1gc0YNkfx7ngezoE_QPuTSL2CUF2-2Zpc/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.887,
+        "tokenEstimate": 131
+      }
+    },
+    {
+      "id": "amana-eval-023",
+      "bucket": "targeted_document",
+      "question": "In Indonesia's Ministry of Health, which unit coordinates the trilateral budget negotiations with Bappenas and the Ministry of Finance, and how does that role shape which digital health programs survive funding trade-offs?",
+      "answerSketch": "The planning bureau (Roren) coordinates the Trilateral Meeting between MoH, Bappenas and MoF, giving it access to strategic information on priorities and negotiation dynamics; it aligns technical units' proposals with policy direction and budget ceilings (including enterprise architecture compliance) and manages inter-program trade-offs, so weakly justified programs are more likely to be cut or deferred.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:637ffca1-fde3-4c80-8c5f-9dd36e27682d",
+        "recordType": "document",
+        "chunkId": "1043",
+        "chunkIndex": 63,
+        "heading": "anggaran yang berlaku, termasuk kepatuhan terhadap kerangka Arsitektur dan Informasi Kerja",
+        "pageFrom": 21,
+        "pageTo": 21,
+        "documentTitle": "Laporan Lanskap Perencanaan, Pembiayaan, dan Penganggaran Kesehatan Digital di Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2029,
+        "sourceUrl": "https://drive.google.com/file/d/1gc0YNkfx7ngezoE_QPuTSL2CUF2-2Zpc/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.887,
+        "tokenEstimate": 182
+      }
+    },
+    {
+      "id": "amana-eval-024",
+      "bucket": "targeted_document",
+      "question": "Bagaimana proses verifikasi identitas lewat kode QR aplikasi Identitas Kependudukan Digital bekerja, dan data apa saja yang dikembalikan setelah dipindai?",
+      "answerSketch": "Pengguna menampilkan QR dari aplikasi IKD; sistem memindai dan memverifikasi keasliannya terhadap basis data Dukcapil (pencocokan 1:1 dengan SIAK), lalu mengembalikan sembilan atribut identitas terpilih yang mencerminkan data pada e-KTP. Alternatif autentikasi lain adalah NIK+PIN IKD+OTP.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "en",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:65d85eb9-aec0-42b7-9068-6351a32b24cb",
+        "recordType": "document",
+        "chunkId": "1219",
+        "chunkIndex": 59,
+        "heading": "NIK+IKD PIN+OTP",
+        "pageFrom": 38,
+        "pageTo": 40,
+        "documentTitle": "Digital ID Research IKD Use Cases Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1Bw6E07ZIb_LhjZ9Y6GeGSa-JrH9gDHDf/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.828,
+        "tokenEstimate": 356
+      }
+    },
+    {
+      "id": "amana-eval-025",
+      "bucket": "targeted_document",
+      "question": "Untuk uji coba e-KTP nirsentuh oleh Dukcapil, skenario penggunaan apa saja yang sudah dicoba dan standar kartu pintar apa yang dipakai?",
+      "answerSketch": "Uji coba mencakup autentikasi di bank, gerbang perumahan/kawasan hunian (dengan data penghuni yang sudah disetujui sebelumnya), dan loket layanan (MPP/kantor pemerintah). Kartu memakai RFID/NFC sesuai ISO 14443, dengan transfer data via frekuensi radio, dan tetap mendukung insert chip (EMV) untuk keamanan serta kompatibilitas mundur.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "en",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:65d85eb9-aec0-42b7-9068-6351a32b24cb",
+        "recordType": "document",
+        "chunkId": "1260",
+        "chunkIndex": 100,
+        "heading": "ABIS",
+        "pageFrom": 67,
+        "pageTo": 68,
+        "documentTitle": "Digital ID Research IKD Use Cases Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1Bw6E07ZIb_LhjZ9Y6GeGSa-JrH9gDHDf/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.843,
+        "tokenEstimate": 292
+      }
+    },
+    {
+      "id": "amana-eval-026",
+      "bucket": "targeted_document",
+      "question": "Platform e-learning perguruan tinggi yang ditawarkan SolTech itu sudah dipakai berapa kampus dan berapa jumlah mahasiswanya, serta bisa terhubung dengan sistem akademik apa?",
+      "answerSketch": "EduMax dari SolTech telah digunakan lebih dari 50 universitas di Indonesia dengan lebih dari 2 juta mahasiswa, mendukung kurikulum Merdeka Belajar dan terintegrasi dengan SIAKAD.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:6df99ea1-bbeb-4515-9401-ef0e81b0b4bb",
+        "recordType": "document",
+        "chunkId": "1736",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "National E-Learning Platform — Ministry of Education",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1bLQ9I3Sdkf0YjIjDkjjwbUW7Cllhy53N/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.745,
+        "tokenEstimate": 167
+      }
+    },
+    {
+      "id": "amana-eval-027",
+      "bucket": "targeted_document",
+      "question": "For the cloud banking platform proposed to Bank Nusantara Sejahtera, what is the planned timeline for moving from on-premise systems to the cloud, and which hyperscalers does the multi-cloud setup support?",
+      "answerSketch": "The proposal offers CloudBankX with an 8-month migration from on-premise to cloud with minimal downtime, running multi-cloud on AWS and Azure, with enterprise security meeting OJK and BI requirements.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:757489b4-5e94-4e3c-84be-526120fa6f6d",
+        "recordType": "document",
+        "chunkId": "1711",
+        "chunkIndex": 3,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 1,
+        "documentTitle": "Cloud Infrastructure Modernization — Regional Banking Consortium",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1W3Au1Wxhq25Clth5rCdqpc8hcjkq_10f/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.795,
+        "tokenEstimate": 201
+      }
+    },
+    {
+      "id": "amana-eval-028",
+      "bucket": "targeted_document",
+      "question": "Dalam kajian kelayakan rancangan kebijakan kader Posyandu bidang kesehatan bersama Kemenkes, di berapa kabupaten/kota observasi lapangan dilakukan dan kerangka analisis apa yang dipakai untuk menilai keterlaksanaan kebijakannya?",
+      "answerSketch": "Observasi lapangan dilakukan di 13 kota/kabupaten di Indonesia, dan penilaian menggunakan pendekatan HELOS, adaptasi dari kerangka TELOS, dengan merujuk pada naskah akademik, roadmap, dan pedoman teknis tata kelola kader kesehatan dari proyek sebelumnya.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "en",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:7d9e07c2-f03c-4a86-8b55-eef0b890446b",
+        "recordType": "document",
+        "chunkId": "161",
+        "chunkIndex": 48,
+        "heading": "(DHTS)",
+        "pageFrom": 16,
+        "pageTo": 16,
+        "documentTitle": "Current Build:",
+        "docType": "other",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1SeqTX6qGbsz6YCX6RT8_evZLVZxc4LtSbEac3LKNswo/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.897,
+        "tokenEstimate": 292
+      }
+    },
+    {
+      "id": "amana-eval-029",
+      "bucket": "targeted_document",
+      "question": "In the design thinking sense-making exercise used in our problem diagnosis training, what kinds of user questions should the team answer with facts rather than assumptions?",
+      "answerSketch": "The exercise lists questions to be answered factually, not by assumption: what the main need of many people is, the most common usage context, the pain points/disappointing factors people experience, what drives their choice of a product or service, what would make their experience enjoyable, and how they make decisions.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:89b258c5-5d11-4b09-ad06-4e9b996ae91f",
+        "recordType": "document",
+        "chunkId": "904",
+        "chunkIndex": 27,
+        "heading": "AMANA",
+        "pageFrom": 28,
+        "pageTo": 29,
+        "documentTitle": "Diagnosis & Validasi Masalah",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1l5QKU3aSsvlIA0rnYCfYMN3QPweSAff1/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.821,
+        "tokenEstimate": 163
+      }
+    },
+    {
+      "id": "amana-eval-030",
+      "bucket": "targeted_document",
+      "question": "What operational improvements has the proposed fleet management platform for the national logistics company delivered in prior Indonesian deployments, and at what scale?",
+      "answerSketch": "The proposal states the system has been deployed across more than 5,000 vehicles in Indonesia, yielding 18% lower fuel consumption, 35% better on-time delivery, and 25% higher fleet utilization.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:909a2807-8fdc-457a-a3fb-d2cc055eea61",
+        "recordType": "document",
+        "chunkId": "1789",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "Fleet & Logistics Management System",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1HCETn7FQXL9U_N47f-WfWaoA-AmhU4md/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.698,
+        "tokenEstimate": 163
+      }
+    },
+    {
+      "id": "amana-eval-031",
+      "bucket": "targeted_document",
+      "question": "Apa saja hambatan utama yang membuat sistem informasi keuangan daerah selama lebih dari sepuluh tahun belum efektif menopang pengambilan keputusan fiskal strategis?",
+      "answerSketch": "Tiga tantangan mendasar: tata kelola belum selaras (aliran data belum end-to-end, input berulang tanpa prinsip once-only dan integrasi API, tidak ada feedback real-time), kualitas data belum optimal (BAS dan struktur data tidak seragam, belum terstandarisasi dari sisi waktu/kelengkapan/akurasi), dan analitik terbatas (fitur analitik minim, belum ada rekomendasi otomatis, rekonsiliasi masih manual).",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:9d038bed-b40e-4507-b58c-dd7f342db283",
+        "recordType": "document",
+        "chunkId": "2848",
+        "chunkIndex": 0,
+        "heading": null,
+        "pageFrom": 1,
+        "pageTo": 3,
+        "documentTitle": "Revised SIKD Next Generation Transformation Framework DJPK",
+        "docType": "framework",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/presentation/d/1zd3Thp4NCJxREDAghY71xcEzRN_eDtZT/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.902,
+        "tokenEstimate": 320
+      }
+    },
+    {
+      "id": "amana-eval-032",
+      "bucket": "targeted_document",
+      "question": "Dalam penawaran modernisasi ERP untuk jaringan ritel PT Retail Borneo Maju, berapa besar penurunan kehabisan stok dan penghematan biaya persediaan yang diklaim vendor berdasarkan implementasi sebelumnya?",
+      "answerSketch": "Solusi ERP yang diusulkan diklaim sudah dipakai 100+ jaringan ritel di Indonesia dengan hasil: stockout turun 45%, biaya inventory hemat 20%, serta visibilitas real-time di seluruh outlet.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:a7746c14-4d27-4703-878b-8c1628371f13",
+        "recordType": "document",
+        "chunkId": "1778",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "ERP Modernization — National Retail Chain",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1A04P_ZIo6Xr8OBjXcvv9wbuXeNHOCARF/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.743,
+        "tokenEstimate": 168
+      }
+    },
+    {
+      "id": "amana-eval-033",
+      "bucket": "targeted_document",
+      "question": "Apa mandat teknis yang diatur PMK 93/2024 terkait pengelolaan dan pertukaran data fiskal, dan bagaimana hal itu menuntut sistem informasi keuangan daerah berfungsi lebih dari sekadar penyimpan data?",
+      "answerSketch": "PMK 93/2024 tentang platform digital SKFN mengatur pengelolaan, validasi, dan pertukaran data fiskal, termasuk pengecekan kualitas data, umpan balik otomatis ke Pemda, dan penyajian wawasan untuk analisis kinerja fiskal; artinya sistem harus menjadi intelligence layer (sistem cerdas) untuk pengambilan keputusan fiskal, bukan hanya wadah penyimpanan.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:a875fb60-58ec-4700-b674-e27f9bf7b62b",
+        "recordType": "document",
+        "chunkId": "630",
+        "chunkIndex": 17,
+        "heading": "1.3 Urgensi Transformasi Mandat Regulasi dan Kebutuhan",
+        "pageFrom": 8,
+        "pageTo": 9,
+        "documentTitle": "Dokumen Cetak Biru Pengembangan SIKD Next Generation yang Akurat–Cerdas–Terhubung",
+        "docType": "technical_document",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2029,
+        "sourceUrl": "https://docs.google.com/document/d/1awTHVez8lZLQTavfdj9Oe3W-tpwIspP7/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.998,
+        "tokenEstimate": 426
+      }
+    },
+    {
+      "id": "amana-eval-034",
+      "bucket": "targeted_document",
+      "question": "What are the recurring data quality problems in the regional financial information system used by the Ministry of Finance, and why do fixes only work downstream?",
+      "answerSketch": "Submitted softcopy regional financial reports sometimes don't match the official local government documents (figures, account details, document versions); audit trails are incomplete and non-standard so changes can't be traced by DJPK; and validation rules differ across the various applications local governments use. The root cause is the absence of a nationally consistent master reference foundation, so improvements are only corrective at the downstream end and depend on manual reconciliation — reflecting a system oriented toward collecting reports rather than managing data as a strategic asset.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:a875fb60-58ec-4700-b674-e27f9bf7b62b",
+        "recordType": "document",
+        "chunkId": "625",
+        "chunkIndex": 12,
+        "heading": "1.2 Tantangan Historis dan Kompleksitas SIKD",
+        "pageFrom": 7,
+        "pageTo": 7,
+        "documentTitle": "Dokumen Cetak Biru Pengembangan SIKD Next Generation yang Akurat–Cerdas–Terhubung",
+        "docType": "technical_document",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2029,
+        "sourceUrl": "https://docs.google.com/document/d/1awTHVez8lZLQTavfdj9Oe3W-tpwIspP7/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.924,
+        "tokenEstimate": 393
+      }
+    },
+    {
+      "id": "amana-eval-035",
+      "bucket": "targeted_document",
+      "question": "Do we have anyone on the talent roster with hands-on financial reporting skills — Excel pivot tables, XLOOKUP, Power Query, plus ERP platforms like SAP or Oracle?",
+      "answerSketch": "Yes — a roster profile lists proficiency in preparing periodic financial reports in Excel (Pivot Tables, XLOOKUP, Power Query) and ERP systems such as SAP/Oracle, with experience consolidating financial data and analyzing key metrics for decision-making.",
+      "questionType": "who_has_experience",
+      "difficulty": "easy",
+      "reusesSourceWording": true,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:abe938ae-e979-471d-819e-26240774163f",
+        "recordType": "document",
+        "chunkId": "419",
+        "chunkIndex": 251,
+        "heading": "2. Financial Reporting & Data Analysis",
+        "pageFrom": 170,
+        "pageTo": 170,
+        "documentTitle": "Talent Roster Expertise AMANA Solutions",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1DcZyslwVXe3Tmez8hjgLPrwQ6sRnSjrx8LuqFd3I03U/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.886,
+        "tokenEstimate": 209
+      }
+    },
+    {
+      "id": "amana-eval-036",
+      "bucket": "targeted_document",
+      "question": "Which capability-building priorities are listed for our health economics staff, covering things like cost-effectiveness/value-based decision making, policy evidence work, and analytics tools?",
+      "answerSketch": "The talent roster lists health technology assessment (economic evaluation and value-based decisions), health policy research (methodology, evidence synthesis, policy analysis), and advanced data analytics (Power BI, SQL, visualization) as development areas.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:abe938ae-e979-471d-819e-26240774163f",
+        "recordType": "document",
+        "chunkId": "434",
+        "chunkIndex": 266,
+        "heading": "methodology, evidence synthesis,",
+        "pageFrom": 186,
+        "pageTo": 187,
+        "documentTitle": "Talent Roster Expertise AMANA Solutions",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1DcZyslwVXe3Tmez8hjgLPrwQ6sRnSjrx8LuqFd3I03U/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.848,
+        "tokenEstimate": 160
+      }
+    },
+    {
+      "id": "amana-eval-037",
+      "bucket": "targeted_document",
+      "question": "Why do Indonesia's current e-commerce rules create duplicated compliance burdens for smaller businesses using AI, and which regulations overlap?",
+      "answerSketch": "Multiple frameworks (ITE Law, GR 71/2019 on electronic systems and transactions, GR 80/2019 on trade via electronic systems, and the personal data protection law) lack AI-specific provisions and impose differing requirements on data storage, processing and sharing, forcing firms to build separate systems and risking penalties.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:b718d26d-0ea9-4251-a20c-992e4851649a",
+        "recordType": "document",
+        "chunkId": "3384",
+        "chunkIndex": 138,
+        "heading": "2. Overlapping regulations confuse MSMEs and",
+        "pageFrom": 37,
+        "pageTo": 37,
+        "documentTitle": "PDF Co Creating Indonesia's AI Future Through Meaningful Policy Dialogues",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ob4dXfwCxClWF8trJT5WC06gJI790txZ/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.959,
+        "tokenEstimate": 276
+      }
+    },
+    {
+      "id": "amana-eval-038",
+      "bucket": "targeted_document",
+      "question": "How many data centres are currently operating in Indonesia versus how many are still being built, and what capacity growth is projected for the market through 2029?",
+      "answerSketch": "Indonesia has 68 operational data centres with 27 more under construction; market volume is expected to be about 0.65 thousand MW in 2024, rising to 1.41 thousand MW by 2029.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:b718d26d-0ea9-4251-a20c-992e4851649a",
+        "recordType": "document",
+        "chunkId": "3323",
+        "chunkIndex": 77,
+        "heading": "CHAPTER 2 | BUILDING BLOCKS OF MEANINGFUL AI ADOPTION",
+        "pageFrom": 24,
+        "pageTo": 24,
+        "documentTitle": "PDF Co Creating Indonesia's AI Future Through Meaningful Policy Dialogues",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ob4dXfwCxClWF8trJT5WC06gJI790txZ/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.825,
+        "tokenEstimate": 387
+      }
+    },
+    {
+      "id": "amana-eval-039",
+      "bucket": "targeted_document",
+      "question": "Vendor mana yang menawarkan platform keamanan siber terintegrasi untuk instansi pemerintah dengan fitur deteksi ancaman, penanganan insiden, dan manajemen kepatuhan sesuai regulasi BSSN?",
+      "answerSketch": "PT Solusi Teknologi Nusantara (SolTech) mengajukan SecureGovX dalam proposal untuk RFP-2026-GOV-089, yang telah lulus audit keamanan di lebih dari 10 institusi pemerintah.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:bbbeecdb-de25-4e7a-85fc-df87bc179638",
+        "recordType": "document",
+        "chunkId": "1748",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "Government Cybersecurity Operations Center",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1McVwlapgr8dXfsfdGMgA42ua4J-DEmrO/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.71,
+        "tokenEstimate": 161
+      }
+    },
+    {
+      "id": "amana-eval-040",
+      "bucket": "targeted_document",
+      "question": "What transaction volume, total value, and uptime track record has the PayX payment gateway and e-wallet platform demonstrated with Indonesian e-commerce merchants?",
+      "answerSketch": "The proposal states PayX has processed over 50 million transactions worth Rp 25 trillion in total value with 99.99% uptime for leading Indonesian e-commerce merchants.",
+      "questionType": "factual",
+      "difficulty": "easy",
+      "reusesSourceWording": true,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:bf2dd46f-33ff-45c4-9aa7-7df41701cc47",
+        "recordType": "document",
+        "chunkId": "1810",
+        "chunkIndex": 2,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "Digital Payment Platform — Fintech Expansion",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1AciH6AdCmTW8Qk_YpJ4tfyuTMla4v1co/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.737,
+        "tokenEstimate": 154
+      }
+    },
+    {
+      "id": "amana-eval-041",
+      "bucket": "targeted_document",
+      "question": "Apa saja hambatan utama dalam adopsi teknologi canggih di sektor kesehatan Indonesia, dan langkah apa yang ditempuh untuk transformasi biomedis?",
+      "answerSketch": "Hambatannya meliputi keterbatasan sumber daya penelitian, minimnya fasilitas dengan peralatan canggih, serta proses persetujuan yang lama akibat regulasi rumit. Upaya yang dilakukan mencakup pengembangan riset biomedis untuk pengobatan presisi, kolaborasi universitas–lembaga riset–swasta, dan perbaikan kerangka regulasi agar adopsi teknologi baru lebih cepat.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:bf704117-6cf3-4e71-a389-2585e5a815be",
+        "recordType": "document",
+        "chunkId": "2734",
+        "chunkIndex": 92,
+        "heading": "2.1.6 Teknologi Kesehatan yang Maju",
+        "pageFrom": 29,
+        "pageTo": 29,
+        "documentTitle": "teknokratik RIBK kirim BPHN.docx 1",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1Vw9lywiunYgY6zqaaQgoUpirnLq2Hzfg/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 1,
+        "tokenEstimate": 362
+      }
+    },
+    {
+      "id": "amana-eval-042",
+      "bucket": "targeted_document",
+      "question": "Bagaimana indeks cakupan layanan kesehatan universal dihitung dan dari mana sumber datanya?",
+      "answerSketch": "UHC SCI dihitung dari gabungan 14 indikator pelacak yang disusun menjadi indeks berskala 0-100, dikelompokkan dalam empat kategori layanan (salah satunya kesehatan reproduksi, ibu, bayi baru lahir, dan anak); datanya tersedia tahunan bersumber dari WHO.",
+      "questionType": "definitional",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:bf704117-6cf3-4e71-a389-2585e5a815be",
+        "recordType": "document",
+        "chunkId": "2753",
+        "chunkIndex": 111,
+        "heading": "anggaran pemerintah pusat dan 10% dari anggaran pemerintah daerah melalui",
+        "pageFrom": 34,
+        "pageTo": 34,
+        "documentTitle": "teknokratik RIBK kirim BPHN.docx 1",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1Vw9lywiunYgY6zqaaQgoUpirnLq2Hzfg/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.951,
+        "tokenEstimate": 393
+      }
+    },
+    {
+      "id": "amana-eval-043",
+      "bucket": "targeted_document",
+      "question": "Which AMANA health advisor supported the national strategy for innovative medicines, doing literature reviews and stakeholder interviews on regulation, HTA, pricing and financing?",
+      "answerSketch": "An advisor's experience entry under BKPK regional pharma work describes conducting literature reviews, supporting interviews with government and industry stakeholders, and synthesizing findings on regulation, health technology assessment, pricing and financing as input to the Stranas Obat Inovatif framework.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:cbc7bd69-a166-446b-bf35-822bddfebff9",
+        "recordType": "document",
+        "chunkId": "471",
+        "chunkIndex": 2,
+        "heading": "BKPK",
+        "pageFrom": 1,
+        "pageTo": 4,
+        "documentTitle": "PG Health Project Experience Input",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1ZHe7W2PvBEEYqS7nXKj6NnomLEnEGdsvXWnYdmYwc8A/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.78,
+        "tokenEstimate": 390
+      }
+    },
+    {
+      "id": "amana-eval-044",
+      "bucket": "targeted_document",
+      "question": "What efficiency and maintenance gains does the SmartFactoryX IoT proposal for the steel manufacturer claim, based on prior deployments in Indonesian plants?",
+      "answerSketch": "The proposal claims up to 35% higher production efficiency, 45% less machine downtime, 28% improvement in OEE, and 22% savings on maintenance costs, based on 15 plant implementations in Indonesia.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": true,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:f4ab556c-769d-427b-9f87-b8c18a64abd2",
+        "recordType": "document",
+        "chunkId": "1725",
+        "chunkIndex": 3,
+        "heading": "1. RINGKASAN EKSEKUTIF",
+        "pageFrom": 1,
+        "pageTo": 2,
+        "documentTitle": "IoT Smart Factory — Manufacturing Digital Twin",
+        "docType": "proposal",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1XpakjPJeQcy1tFGgZ3h0Pq0gyr10kbIt/view",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.68,
+        "tokenEstimate": 180
+      }
+    },
+    {
+      "id": "amana-eval-045",
+      "bucket": "targeted_document",
+      "question": "Apa saja hambatan utama yang membuat sistem informasi keuangan daerah belum efektif mendukung pengambilan keputusan fiskal selama ini?",
+      "answerSketch": "Ada tiga tantangan mendasar: tata kelola belum selaras (alur data belum end-to-end, input berulang tanpa prinsip once-only dan integrasi API, tidak ada umpan balik real-time), kualitas data belum optimal (BAS dan struktur data tidak seragam, standar waktu/kelengkapan/akurasi lemah), serta kapabilitas analitik terbatas (fitur analitik minim, tidak ada rekomendasi otomatis, rekonsiliasi masih manual).",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:fa860300-cf54-43b5-935a-6cb5d19482f3",
+        "recordType": "document",
+        "chunkId": "594",
+        "chunkIndex": 2,
+        "heading": "PENGEMBANGAN DAN TRANSFORMASI SIKD BERKELANJUTAN",
+        "pageFrom": 2,
+        "pageTo": 3,
+        "documentTitle": "Blueprint SIKD dan Digitalisasi HKPD Des25",
+        "docType": "technical_document",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1KgEUJzbQji5CDJGTcwpZKanYVxN6-QYW/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.866,
+        "tokenEstimate": 343
+      }
+    },
+    {
+      "id": "amana-eval-046",
+      "bucket": "broad_document",
+      "question": "For the childbirth life event, what multi-channel communication tactics are recommended to reach new parents both online and offline?",
+      "answerSketch": "Online: stronger SEO for official information, personalised portals, and social media like TikTok/Instagram for younger parents. Offline: presence in health facilities, community programmes, proactive field outreach (door-to-door), and involving local officials.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:07a642e4-f693-450d-aab8-bdafdecfad81",
+        "recordType": "document",
+        "chunkId": "1673",
+        "chunkIndex": 366,
+        "heading": "2026. Human-Centred Public Services Playbook",
+        "pageFrom": 89,
+        "pageTo": 89,
+        "documentTitle": "Cetak Playbook Pelayanan Publik Berfokus pada Manusia",
+        "docType": "framework",
+        "practiceGroup": "digital",
+        "documentYear": 2026,
+        "sourceUrl": "https://drive.google.com/file/d/1lbXIU9zbgSh0P2Tk0L1zjLVNTHFYQxJH/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.765,
+        "tokenEstimate": 413
+      }
+    },
+    {
+      "id": "amana-eval-047",
+      "bucket": "broad_document",
+      "question": "Apa pelajaran dari pengalaman Filipina soal ketergantungan pendanaan donor, dan berapa porsi minimal pembiayaan domestik yang disarankan untuk kesehatan digital di Indonesia?",
+      "answerSketch": "Filipina sangat bergantung pada ODA sehingga banyak sistem berhenti setelah proyek donor selesai; Indonesia disarankan menetapkan ambang pendanaan domestik minimal 60% dari total anggaran kesehatan digital bersumber APBN/APBD.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:637ffca1-fde3-4c80-8c5f-9dd36e27682d",
+        "recordType": "document",
+        "chunkId": "1060",
+        "chunkIndex": 80,
+        "heading": "5.1. FILIPINA: VALIDASI REALITAS DIGITAL HEALTH DI INDONESIA",
+        "pageFrom": 25,
+        "pageTo": 26,
+        "documentTitle": "Laporan Lanskap Perencanaan, Pembiayaan, dan Penganggaran Kesehatan Digital di Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2029,
+        "sourceUrl": "https://drive.google.com/file/d/1gc0YNkfx7ngezoE_QPuTSL2CUF2-2Zpc/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.719,
+        "tokenEstimate": 279
+      }
+    },
+    {
+      "id": "amana-eval-048",
+      "bucket": "broad_document",
+      "question": "In the life-event based public service playbook, what does the maturity scale look like for data and system integration — what distinguishes the lowest level from the highest?",
+      "answerSketch": "The maturity model runs from Level 1 (systems and data not integrated / siloed) through limited data exchange and standardized data exchange, up to Level 4 (real-time, AI-supported integration). It is part of Step 5, identifying improvement areas and priorities by comparing the as-is condition against desired standards.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:07a642e4-f693-450d-aab8-bdafdecfad81",
+        "recordType": "document",
+        "chunkId": "1508",
+        "chunkIndex": 201,
+        "heading": "rekomendasi perbaikan layanan publik berbasis siklus",
+        "pageFrom": 47,
+        "pageTo": 47,
+        "documentTitle": "Cetak Playbook Pelayanan Publik Berfokus pada Manusia",
+        "docType": "framework",
+        "practiceGroup": "digital",
+        "documentYear": 2026,
+        "sourceUrl": "https://drive.google.com/file/d/1lbXIU9zbgSh0P2Tk0L1zjLVNTHFYQxJH/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.628,
+        "tokenEstimate": 412
+      }
+    },
+    {
+      "id": "amana-eval-049",
+      "bucket": "broad_document",
+      "question": "Berapa prevalensi depresi dan pikiran bunuh diri pada kelompok remaja dibandingkan rata-rata nasional menurut SKI 2023, dan bagaimana tren jumlah kasus bunuh diri yang tercatat kepolisian?",
+      "answerSketch": "Remaja memiliki prevalensi depresi 2% vs rerata nasional 1,4%, dan pikiran bunuh diri 0,49% vs 0,25% nasional. Data Polri menunjukkan kasus bunuh diri semua usia naik dari 826 (2022) menjadi 1.350 (2023).",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:1f2831d8-790d-4ad9-9367-8959bbba7c94",
+        "recordType": "document",
+        "chunkId": "2478",
+        "chunkIndex": 39,
+        "heading": "2019 menjadi 21,6% pada tahun 2022. Walaupun demikian, penurunan yang terjadi tidak",
+        "pageFrom": 13,
+        "pageTo": 13,
+        "documentTitle": "AMANA WIP teknokratik RIBK 20250327",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1C7VwMFJQyvyNZP8jq6M0Re63KqcKAhn5/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.941,
+        "tokenEstimate": 396
+      }
+    },
+    {
+      "id": "amana-eval-050",
+      "bucket": "broad_document",
+      "question": "Kenapa penyaluran dan pelaporan Transfer ke Daerah dipilih sebagai area pertama yang direkayasa ulang proses bisnisnya sebelum DSS dan EWS diterapkan di SIKD baru?",
+      "answerSketch": "Karena TKD punya beban administratif terbesar: syarat salur kompleks, verifikasi tersebar, dan pelaporan berulang di banyak aplikasi, yang membebani Pemda dan menyulitkan DJPK memperoleh data konsisten dan real-time; BPR menjadikannya ringkas, digital by design, dan terintegrasi pusat-daerah.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:a875fb60-58ec-4700-b674-e27f9bf7b62b",
+        "recordType": "document",
+        "chunkId": "672",
+        "chunkIndex": 59,
+        "heading": "3.2 Business Process Reengineering (BPR) Simplifikasi TKD",
+        "pageFrom": 24,
+        "pageTo": 25,
+        "documentTitle": "Dokumen Cetak Biru Pengembangan SIKD Next Generation yang Akurat–Cerdas–Terhubung",
+        "docType": "technical_document",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2029,
+        "sourceUrl": "https://docs.google.com/document/d/1awTHVez8lZLQTavfdj9Oe3W-tpwIspP7/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.994,
+        "tokenEstimate": 402
+      }
+    },
+    {
+      "id": "amana-eval-051",
+      "bucket": "broad_document",
+      "question": "What biometric data was captured during Indonesia's nationwide electronic ID card enrollment, and when did the card's validity change from five years to lifetime?",
+      "answerSketch": "Enrollment recorded all ten fingerprints, a facial image and iris scans; Law No. 24/2013 amended the card from a five-year expiry to lifetime validity.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:65d85eb9-aec0-42b7-9068-6351a32b24cb",
+        "recordType": "document",
+        "chunkId": "1174",
+        "chunkIndex": 14,
+        "heading": "Introduction of e-KTP (electronic ID",
+        "pageFrom": 11,
+        "pageTo": 11,
+        "documentTitle": "Digital ID Research IKD Use Cases Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1Bw6E07ZIb_LhjZ9Y6GeGSa-JrH9gDHDf/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.779,
+        "tokenEstimate": 136
+      }
+    },
+    {
+      "id": "amana-eval-052",
+      "bucket": "broad_document",
+      "question": "Dalam analisis pemangku kepentingan untuk program transformasi, bagaimana cara memverifikasi sikap sebenarnya seorang aktor kunci dan mengapa pengaruh informal bisa lebih menentukan daripada jabatan formal?",
+      "answerSketch": "Sikap harus diverifikasi lewat wawancara informal, analisis pernyataan publik, dan observasi perilaku di forum koordinasi, karena ucapan di rapat formal sering berbeda dengan tindakan. Pengaruh mencakup kekuatan formal (jabatan, otoritas tanda tangan), informal (jaringan, akses ke pengambil keputusan), dan veto; staf teknis tanpa jabatan tinggi bisa sangat berpengaruh.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:24ff126d-4f80-4704-ba27-d85fb176dc22",
+        "recordType": "document",
+        "chunkId": "761",
+        "chunkIndex": 20,
+        "heading": "AMANA",
+        "pageFrom": 12,
+        "pageTo": 13,
+        "documentTitle": "Navigasi Perubahan yang Berkelanjutan",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/15PWMIkjyxitv1C1LZPdURXAAzwlrCtUk/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.87,
+        "tokenEstimate": 378
+      }
+    },
+    {
+      "id": "amana-eval-053",
+      "bucket": "broad_document",
+      "question": "Apa saja indikator keberhasilan pembentukan kelompok kerja teknis lintas sektor untuk digitalisasi SDM kesehatan, dan bagaimana kelompok itu diresmikan oleh Ditjen SDMK?",
+      "answerSketch": "Indikatornya adalah adanya dokumen resmi berisi peran, fungsi, area keterlibatan, dan agenda pertemuan TWG yang disahkan Ditjen SDMK, mencakup rencana kegiatan kolaboratif lintas sektor serta peta kebutuhan dan sumber daya untuk mendukung perjalanan nakes dari pendidikan hingga pasar kerja; peresmian dilakukan lewat Surat Penunjukan Langsung yang memuat tugas, wewenang, dan target koordinasi kolaborasi A-B-C-G-M.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:5214b82e-12eb-4790-a3b3-0a3ad81cdd5a",
+        "recordType": "document",
+        "chunkId": "4585",
+        "chunkIndex": 434,
+        "heading": "Group (TWG) SATUSEHAT SDMK",
+        "pageFrom": 107,
+        "pageTo": 107,
+        "documentTitle": "Peta Jalan SATUSEHATSDMK 2025 2029",
+        "docType": "technical_document",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1mKrhC142YVJovTjPnjvsTdsNch8Zpr1c/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.81,
+        "tokenEstimate": 156
+      }
+    },
+    {
+      "id": "amana-eval-054",
+      "bucket": "broad_document",
+      "question": "How is the national ID number used in school enrolment systems in Indonesia to prevent duplicate student records, and which agencies are involved?",
+      "answerSketch": "Student enrolment through the education ministry's data platforms uses NIK-based verification (with Dukcapil, Kemendikbudristek's Ditjen PAUD/Dikdas/Dikmen) to confirm student identity, cut duplication and ensure correct record linkage; NIK is mandatory for official school records across districts.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:65d85eb9-aec0-42b7-9068-6351a32b24cb",
+        "recordType": "document",
+        "chunkId": "1291",
+        "chunkIndex": 131,
+        "heading": "2. Verifying student identity through Dapodik & SIPINTAR platform",
+        "pageFrom": 84,
+        "pageTo": 87,
+        "documentTitle": "Digital ID Research IKD Use Cases Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1Bw6E07ZIb_LhjZ9Y6GeGSa-JrH9gDHDf/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.728,
+        "tokenEstimate": 145
+      }
+    },
+    {
+      "id": "amana-eval-055",
+      "bucket": "broad_document",
+      "question": "In Indonesia's AI policy dialogues, why is ethical AI framed as a governance issue rather than a purely technical one, and what role does public digital literacy play?",
+      "answerSketch": "Ethical AI is presented as a governance challenge needing multi-stakeholder alignment, not just technical fixes; a digitally and cybersecurity-literate society adapts better to AI and protects its own data, while aligning AI use with regulation safeguards citizens' digital rights against misinformation and disinformation.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:b718d26d-0ea9-4251-a20c-992e4851649a",
+        "recordType": "document",
+        "chunkId": "3369",
+        "chunkIndex": 123,
+        "heading": "KEY LEARNINGS",
+        "pageFrom": 32,
+        "pageTo": 33,
+        "documentTitle": "PDF Co Creating Indonesia's AI Future Through Meaningful Policy Dialogues",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ob4dXfwCxClWF8trJT5WC06gJI790txZ/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.729,
+        "tokenEstimate": 184
+      }
+    },
+    {
+      "id": "amana-eval-056",
+      "bucket": "broad_document",
+      "question": "Apa dampak dihapuskannya kewajiban alokasi minimum anggaran kesehatan 5% APBN setelah terbitnya UU Kesehatan 2023 terhadap pendanaan program kesehatan digital?",
+      "answerSketch": "UU No. 17/2023 mencabut mandatory health spending 5% APBN yang diatur UU No. 36/2009, sehingga alokasi kini ditentukan lewat penganggaran berbasis kinerja; kesehatan digital sebagai sub-sektor baru harus bersaing dengan justifikasi investasi yang kuat di tengah tren efisiensi anggaran.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:637ffca1-fde3-4c80-8c5f-9dd36e27682d",
+        "recordType": "document",
+        "chunkId": "1020",
+        "chunkIndex": 40,
+        "heading": "36 Tahun 2009. Jika sebelumnya alokasi kesehatan dijamin oleh ketentuan hukum, kini besarannya",
+        "pageFrom": 13,
+        "pageTo": 13,
+        "documentTitle": "Laporan Lanskap Perencanaan, Pembiayaan, dan Penganggaran Kesehatan Digital di Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2029,
+        "sourceUrl": "https://drive.google.com/file/d/1gc0YNkfx7ngezoE_QPuTSL2CUF2-2Zpc/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.912,
+        "tokenEstimate": 163
+      }
+    },
+    {
+      "id": "amana-eval-057",
+      "bucket": "broad_document",
+      "question": "Mengapa pengembangan kamera pengawas di Jakarta perlu diposisikan sebagai infrastruktur strategis Smart City, bukan hanya penambahan perangkat?",
+      "answerSketch": "Karena arah RPJMD 2025–2029 menekankan pemerintahan berbasis data dan integrasi sistem informasi; CCTV mendukung pemantauan real-time, deteksi dini, dan keputusan berbasis bukti, sementara kondisi eksisting masih terfragmentasi (sistem dan dashboard berbeda antar perangkat daerah), sehingga perlu kerangka tata kelola terpadu lewat Grand Design.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:0e3e7070-079c-48c9-8fb5-701fb1fc1459",
+        "recordType": "document",
+        "chunkId": "3046",
+        "chunkIndex": 180,
+        "heading": "BAB III",
+        "pageFrom": 44,
+        "pageTo": 44,
+        "documentTitle": "1.1.1.   Konteks Perkembangan DKI Jakarta sebagai Kota Global .................................................................. 4",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ry_zqdff1DHYPjoErJpbbBPGNUMX8zqd/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.873,
+        "tokenEstimate": 337
+      }
+    },
+    {
+      "id": "amana-eval-058",
+      "bucket": "broad_document",
+      "question": "Untuk risiko dengan probabilitas tinggi sekaligus dampak tinggi dalam matriks risiko transformasi, langkah mitigasi apa yang harus dimasukkan ke dalam blueprint?",
+      "answerSketch": "Mitigasi proaktif wajib masuk blueprint: tetapkan PIC, timeline, dan indikator keberhasilan mitigasi, serta direview di setiap milestone.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:24ff126d-4f80-4704-ba27-d85fb176dc22",
+        "recordType": "document",
+        "chunkId": "770",
+        "chunkIndex": 29,
+        "heading": "PRIORITASKAN",
+        "pageFrom": 17,
+        "pageTo": 17,
+        "documentTitle": "Navigasi Perubahan yang Berkelanjutan",
+        "docType": "training_material",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/15PWMIkjyxitv1C1LZPdURXAAzwlrCtUk/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.695,
+        "tokenEstimate": 128
+      }
+    },
+    {
+      "id": "amana-eval-059",
+      "bucket": "broad_document",
+      "question": "For the health workforce component of Indonesia's national health data platform, what open governance question remains about how its technical working group should be structured?",
+      "answerSketch": "It must still be decided whether it becomes a standalone technical working group dedicated to health workforce (SDMK) issues, or whether the existing SATUSEHAT technical working group simply takes on an expanded mandate covering health workforce matters.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:5214b82e-12eb-4790-a3b3-0a3ad81cdd5a",
+        "recordType": "document",
+        "chunkId": "4457",
+        "chunkIndex": 306,
+        "heading": "TWG",
+        "pageFrom": 82,
+        "pageTo": 82,
+        "documentTitle": "Peta Jalan SATUSEHATSDMK 2025 2029",
+        "docType": "technical_document",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1mKrhC142YVJovTjPnjvsTdsNch8Zpr1c/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.554,
+        "tokenEstimate": 117
+      }
+    },
+    {
+      "id": "amana-eval-060",
+      "bucket": "broad_document",
+      "question": "What evidence links fragmented health information systems across Indonesian facilities to preventable maternal deaths?",
+      "answerSketch": "Maternal death audit committees found referral cases involved out-of-sync information from multiple facilities, preventing reconstruction of clinical history; a study of 30 maternal deaths at an East Java referral hospital found delays traceable to incomplete clinical information at the point of care contributed directly to preventable deaths (e.g., undetected preeclampsia when antenatal records don't follow the patient).",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:2231e0bc-804e-4248-a39b-8a1bcfb8e8f0",
+        "recordType": "document",
+        "chunkId": "920",
+        "chunkIndex": 6,
+        "heading": "timeliness of maternal and child health interventions, and generate scalable operational",
+        "pageFrom": 2,
+        "pageTo": 2,
+        "documentTitle": "AMANA Agentic State in Health Concept Note Proposal",
+        "docType": "concept_note",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/document/d/1K94OQsK17CvcpAFrVJ4p6cPjizmkw9PW/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.88,
+        "tokenEstimate": 433
+      }
+    },
+    {
+      "id": "amana-eval-061",
+      "bucket": "broad_document",
+      "question": "How does Indonesia's per capita health spending compare with peer countries like Malaysia and Thailand, and how much more would be needed to reach the upper-middle-income average?",
+      "answerSketch": "In 2020 Indonesia spent about $228 PPP per capita on health, roughly half that of similarly developed countries such as Malaysia and Thailand; reaching the upper-middle-income country average would require an additional $471 PPP per capita.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:bf704117-6cf3-4e71-a389-2585e5a815be",
+        "recordType": "document",
+        "chunkId": "2724",
+        "chunkIndex": 82,
+        "heading": "2.1.5 Tata Kelola dan Pendanaan Kesehatan yang Efektif",
+        "pageFrom": 26,
+        "pageTo": 27,
+        "documentTitle": "teknokratik RIBK kirim BPHN.docx 1",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1Vw9lywiunYgY6zqaaQgoUpirnLq2Hzfg/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.965,
+        "tokenEstimate": 406
+      }
+    },
+    {
+      "id": "amana-eval-062",
+      "bucket": "broad_document",
+      "question": "What is the estimated annual economic value Indonesia could save by shifting from physical ID cards to digital population identity, and what are the two categories that make up that figure?",
+      "answerSketch": "Roughly USD 1.8–1.85 billion per year, split between direct savings to the state budget (APBN) from reduced physical materials and indirect savings from efficiency gains, less paperwork, and digital data access for institutions.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:65d85eb9-aec0-42b7-9068-6351a32b24cb",
+        "recordType": "document",
+        "chunkId": "1304",
+        "chunkIndex": 144,
+        "heading": "US$ 1,804,885,496",
+        "pageFrom": 93,
+        "pageTo": 93,
+        "documentTitle": "Digital ID Research IKD Use Cases Indonesia",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1Bw6E07ZIb_LhjZ9Y6GeGSa-JrH9gDHDf/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.523,
+        "tokenEstimate": 188
+      }
+    },
+    {
+      "id": "amana-eval-063",
+      "bucket": "broad_document",
+      "question": "What service level and user satisfaction targets are set for the health workforce digital platform under the Ministry of Health's 2025-2029 roadmap, and which units are accountable for them?",
+      "answerSketch": "Targets include maintaining 99.9% SLA compliance annually, an average customer satisfaction score of 85% each quarter, and keeping accesses flagged as threats at no more than 25%; the responsible parties are Pusdatin/TTO and the data unit of the Directorate General of Health Human Resources.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "id",
+      "crossLingual": true,
+      "expected": {
+        "recordId": "gdrive:5214b82e-12eb-4790-a3b3-0a3ad81cdd5a",
+        "recordType": "document",
+        "chunkId": "4343",
+        "chunkIndex": 192,
+        "heading": "INDIKATOR KEBERHASILAN",
+        "pageFrom": 61,
+        "pageTo": 61,
+        "documentTitle": "Peta Jalan SATUSEHATSDMK 2025 2029",
+        "docType": "technical_document",
+        "practiceGroup": "digital",
+        "documentYear": 2025,
+        "sourceUrl": "https://drive.google.com/file/d/1mKrhC142YVJovTjPnjvsTdsNch8Zpr1c/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.734,
+        "tokenEstimate": 221
+      }
+    },
+    {
+      "id": "amana-eval-064",
+      "bucket": "broad_document",
+      "question": "Metode analitis apa saja yang dipakai dalam kajian penyusunan Grand Design CCTV Jakarta untuk menilai kondisi regulasi dan tata kelola yang ada saat ini?",
+      "answerSketch": "Kajian memakai pendekatan kualitatif deskriptif dengan tiga langkah: analisis isi untuk menarik prinsip kunci dari regulasi/pedoman internasional (legalitas, proporsionalitas, batas retensi data, keamanan informasi, akuntabilitas pengelola data), analisis kesenjangan membandingkan kondisi eksisting dengan standar dan praktik kota lain, serta analisis komparatif antar-kota melalui studi kasus.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:0e3e7070-079c-48c9-8fb5-701fb1fc1459",
+        "recordType": "document",
+        "chunkId": "2896",
+        "chunkIndex": 30,
+        "heading": "1.2.3. Pendekatan Analisis",
+        "pageFrom": 6,
+        "pageTo": 7,
+        "documentTitle": "1.1.1.   Konteks Perkembangan DKI Jakarta sebagai Kota Global .................................................................. 4",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ry_zqdff1DHYPjoErJpbbBPGNUMX8zqd/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.956,
+        "tokenEstimate": 387
+      }
+    },
+    {
+      "id": "amana-eval-065",
+      "bucket": "broad_document",
+      "question": "What is the main weakness of Indonesia's existing AI governance frameworks, such as the national AI strategy and the financial regulator's ethics code, in terms of legal force and compliance?",
+      "answerSketch": "They function only as non-binding guidelines, so compliance is voluntary with no enforcement mechanisms; the legal foundation is fragmented and a binding law or presidential regulation is still being drafted, and current rules don't explicitly regulate AI as a technology.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:b718d26d-0ea9-4251-a20c-992e4851649a",
+        "recordType": "document",
+        "chunkId": "3313",
+        "chunkIndex": 67,
+        "heading": "AI",
+        "pageFrom": 22,
+        "pageTo": 22,
+        "documentTitle": "PDF Co Creating Indonesia's AI Future Through Meaningful Policy Dialogues",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ob4dXfwCxClWF8trJT5WC06gJI790txZ/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.815,
+        "tokenEstimate": 362
+      }
+    },
+    {
+      "id": "amana-eval-066",
+      "bucket": "broad_document",
+      "question": "How should team leads and HR use AMANA's career grading framework differently, and how much room is there to deviate from the standard level criteria for specialised programs?",
+      "answerSketch": "Leads use it for coaching, performance reviews and team capacity planning, working with HR on development plans; HR uses it for fairness and consistency in recruitment, placement, promotion, appraisals and succession planning. Because AMANA works through practice groups, reasonable deviations in tasks and criteria are allowed, and program-specific competencies complement rather than replace the grading structure — it is a baseline reference.",
+      "questionType": "comparative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:22305f34-c4bc-49a0-a13f-451d0baff271",
+        "recordType": "document",
+        "chunkId": "485",
+        "chunkIndex": 3,
+        "heading": "📖READ ME",
+        "pageFrom": 3,
+        "pageTo": 4,
+        "documentTitle": "250526 | AMANA Career Grading",
+        "docType": "research_report",
+        "practiceGroup": null,
+        "documentYear": null,
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/1WYvzANJv_EVGt5ev6nt3hLmBzibAEB4kgJRUGJ84oCE/edit?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.813,
+        "tokenEstimate": 404
+      }
+    },
+    {
+      "id": "amana-eval-067",
+      "bucket": "broad_document",
+      "question": "Dalam pengembangan SIKD generasi berikutnya untuk DJPK, apa saja kemampuan analitik yang disediakan sistem pendukung keputusan bagi pemantauan fiskal 542 pemerintah daerah?",
+      "answerSketch": "DSS mengolah data fiskal tervalidasi menjadi analitik real-time: dashboard kualitas belanja, efektivitas TKD, pertumbuhan PAD, kondisi kas daerah, dan kepatuhan pelaporan, plus drill-down perbandingan antardaerah/tahun/jenis belanja serta laporan ringkas dan rekomendasi kebijakan bagi pimpinan.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:a875fb60-58ec-4700-b674-e27f9bf7b62b",
+        "recordType": "document",
+        "chunkId": "678",
+        "chunkIndex": 65,
+        "heading": "3.3 Produk Penggerak SIKD Decision Support System (DSS)",
+        "pageFrom": 27,
+        "pageTo": 28,
+        "documentTitle": "Dokumen Cetak Biru Pengembangan SIKD Next Generation yang Akurat–Cerdas–Terhubung",
+        "docType": "technical_document",
+        "practiceGroup": "strategy_transformation",
+        "documentYear": 2029,
+        "sourceUrl": "https://docs.google.com/document/d/1awTHVez8lZLQTavfdj9Oe3W-tpwIspP7/edit?usp=drivesdk&ouid=111792867355520227824&rtpof=true&sd=true",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.887,
+        "tokenEstimate": 415
+      }
+    },
+    {
+      "id": "amana-eval-068",
+      "bucket": "broad_document",
+      "question": "Agenda kesehatan global apa saja yang dijadikan rujukan dalam penyusunan Rencana Induk Bidang Kesehatan, dan apa saja prioritas strategis yang ditetapkan WHO untuk periode 2025-2028?",
+      "answerSketch": "Rujukan utamanya adalah SDGs 2030 (khususnya tujuan 3 tentang hidup sehat dan well-being, yang diinstitusionalisasikan lewat Perpres No. 111/2022) serta program kerja umum WHO ke-14 (GPW 14) 2025-2028 yang memuat empat agenda strategis, antara lain pencegahan dan mitigasi ancaman kesehatan masa depan termasuk perubahan iklim, penanganan determinan kesehatan, dan penguatan layanan kesehatan primer untuk mencapai UHC.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:1f2831d8-790d-4ad9-9367-8959bbba7c94",
+        "recordType": "document",
+        "chunkId": "2528",
+        "chunkIndex": 89,
+        "heading": "1.2 Analisis Situasi Kesehatan Global",
+        "pageFrom": 27,
+        "pageTo": 28,
+        "documentTitle": "AMANA WIP teknokratik RIBK 20250327",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1C7VwMFJQyvyNZP8jq6M0Re63KqcKAhn5/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.92,
+        "tokenEstimate": 394
+      }
+    },
+    {
+      "id": "amana-eval-069",
+      "bucket": "broad_document",
+      "question": "Which sectors are recommended for AI adoption support in Indonesia to spread digital transformation beyond big cities?",
+      "answerSketch": "The report recommends extending digitalisation beyond urban centres and strategic sectors, with programmes supporting AI adoption in agriculture, MSMEs, public services, and sustainability for inclusive growth and productivity gains.",
+      "questionType": "factual",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "en",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:b718d26d-0ea9-4251-a20c-992e4851649a",
+        "recordType": "document",
+        "chunkId": "3464",
+        "chunkIndex": 218,
+        "heading": "5. Digital Ecosystem",
+        "pageFrom": 54,
+        "pageTo": 55,
+        "documentTitle": "PDF Co Creating Indonesia's AI Future Through Meaningful Policy Dialogues",
+        "docType": "research_report",
+        "practiceGroup": "digital",
+        "documentYear": null,
+        "sourceUrl": "https://drive.google.com/file/d/1ob4dXfwCxClWF8trJT5WC06gJI790txZ/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.736,
+        "tokenEstimate": 244
+      }
+    },
+    {
+      "id": "amana-eval-070",
+      "bucket": "broad_document",
+      "question": "Mengapa pendekatan layanan kesehatan menurut tahapan usia dianggap solusi untuk kondisi Indonesia yang masih menanggung penyakit infeksi sekaligus penyakit kronis?",
+      "answerSketch": "Indonesia menghadapi beban ganda penyakit (menular seperti TBC/malaria dan tidak menular seperti KJSU yang naik akibat gaya hidup, urbanisasi, demografi). Layanan berbasis siklus hidup menawarkan intervensi berkelanjutan dan terintegrasi dari kehamilan hingga lansia, menekankan pencegahan dan promosi sesuai kebutuhan usia sehingga deteksi dini lebih baik, kualitas hidup meningkat, dan beban ekonomi kesehatan nasional berkurang.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "id",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "gdrive:bf704117-6cf3-4e71-a389-2585e5a815be",
+        "recordType": "document",
+        "chunkId": "2672",
+        "chunkIndex": 30,
+        "heading": "2.1 Analisis Situasi Pembangunan Bidang Kesehatan Indonesia",
+        "pageFrom": 11,
+        "pageTo": 12,
+        "documentTitle": "teknokratik RIBK kirim BPHN.docx 1",
+        "docType": "research_report",
+        "practiceGroup": "health_education",
+        "documentYear": 2045,
+        "sourceUrl": "https://drive.google.com/file/d/1Vw9lywiunYgY6zqaaQgoUpirnLq2Hzfg/view?usp=drivesdk",
+        "confidentiality": "internal"
+      },
+      "provenance": {
+        "chunkQuality": 0.898,
+        "tokenEstimate": 406
+      }
+    },
+    {
+      "id": "amana-eval-071",
+      "bucket": "entity",
+      "question": "Siapa staf pengembangan bisnis senior di praktik digital yang punya sekitar enam tahun pengalaman dan bisa kami libatkan untuk menyiapkan proposal tender pemerintah?",
+      "answerSketch": "Rita Damayanti, Senior Business Development Associate di practice group digital dengan 6 tahun pengalaman.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "expert:rita-damayanti",
+        "recordType": "expert",
+        "documentTitle": "Rita Damayanti",
+        "practiceGroup": "digital"
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-072",
+      "bucket": "entity",
+      "question": "Who on our team has around 15 years of experience advising government on e-government and digital strategy, and can also lead data governance and analytics workstreams (SQL, data modeling, dashboards) for a public sector bid?",
+      "answerSketch": "A senior consultant in the strategy and transformation practice with 15 years' experience, specializing in digital government/e-government, digital policy, and data governance, analytics, warehousing and visualization, plus public policy research and health system strengthening.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "expert:fia-mahanani",
+        "recordType": "expert",
+        "documentTitle": "Fia Mahanani",
+        "practiceGroup": "strategy_transformation"
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-073",
+      "bucket": "entity",
+      "question": "Siapa konsultan di praktik digital dengan pengalaman sekitar 10 tahun yang pernah memimpin penyusunan KPI, kerangka, dan perangkat pemantauan-evaluasi proyek, sekaligus terlibat dalam kelompok kerja dan perumusan kebijakan agenda pembangunan berkelanjutan di sektor infrastruktur, energi, air, dan sanitasi?",
+      "answerSketch": "Seorang Senior Associate di practice group digital dengan 10 tahun pengalaman, ahli manajemen proyek, monitoring & evaluasi (memimpin Monev, membuat KPI dan tools/framework), serta kontribusi pada SDG di sektor infrastruktur, energi, air, dan sanitasi termasuk working group dan pembuatan kebijakan.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "expert:malindo-andhi-saputra-marpaung",
+        "recordType": "expert",
+        "documentTitle": "Malindo Andhi Saputra Marpaung",
+        "practiceGroup": "digital"
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-074",
+      "bucket": "entity",
+      "question": "Siapa manajer proyek di praktik digital dengan sekitar 8 tahun pengalaman yang bisa memimpin riset pengguna mendalam sekaligus menyusun strategi digital dan peta jalan pengembangan produk, serta bersertifikasi human-centered design?",
+      "answerSketch": "Aulia Chairunisa, Project Manager di practice group digital dengan 8 tahun pengalaman; keahlian utama digital strategy, product development, dan qualitative research; memiliki sertifikasi Design Kit (human-centered design) dan pelatihan riset pasar/product-market fit.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "expert:aulia-chairunisa",
+        "recordType": "expert",
+        "documentTitle": "Aulia Chairunisa",
+        "practiceGroup": "digital"
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-075",
+      "bucket": "entity",
+      "question": "Siapa di tim kami yang menangani pengembangan kemitraan dan sudah punya pengalaman sekitar 12 tahun di ranah strategi dan transformasi organisasi?",
+      "answerSketch": "Rekam talenta menunjukkan seorang staf dengan peran Partnership di practice group strategy & transformation dengan 12 tahun pengalaman.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "expert:muhammad-rofi-ash-shiddiq",
+        "recordType": "expert",
+        "documentTitle": "Muhammad Rofi Ash.Shiddiq",
+        "practiceGroup": "strategy_transformation"
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-076",
+      "bucket": "entity",
+      "question": "Siapa konsultan senior di tim kesehatan dan pendidikan yang punya rekam jejak menulis makalah kebijakan ekonomi kesehatan di lembaga riset internasional, sekaligus kuat di analitik data dan penguatan sistem kesehatan?",
+      "answerSketch": "Seorang Senior Associate di praktik health_education dengan 7 tahun pengalaman, menerbitkan 3 policy paper ekonomi kesehatan dalam 1,5 tahun di Center for Global Development, dengan kapabilitas epidemiologi, kebijakan kesehatan, penguatan sistem kesehatan, M&E, dan data analytics.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "expert:asti-shafira",
+        "recordType": "expert",
+        "documentTitle": "Asti Shafira",
+        "practiceGroup": "health_education"
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-077",
+      "bucket": "entity",
+      "question": "Is there an industry association for sharia-compliant financial technology providers in Indonesia that we could bring in as a digital economy partner?",
+      "answerSketch": "Yes — the Indonesian Sharia Fintech Association (AFSI) is listed as a digital economy partner contact.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "partner:asosiasi-fintech-syariah-indonesia-afsi",
+        "recordType": "partner",
+        "documentTitle": "Asosiasi Fintech Syariah Indonesia (AFSI)",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-078",
+      "bucket": "entity",
+      "question": "Which industry association represents peer-to-peer lending platforms in Indonesia and could be engaged as a partner on digital financing initiatives?",
+      "answerSketch": "The record identifies AFPI (Asosiasi Fintech Pendanaan Bersama Indonesia), the association of Indonesian joint-funding fintech companies, under the digital economy financing cluster.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "partner:asosiasi-fintech-pendanaan-bersama-indonesia-afpi",
+        "recordType": "partner",
+        "documentTitle": "Asosiasi Fintech Pendanaan Bersama Indonesia (AFPI)",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-079",
+      "bucket": "entity",
+      "question": "Apakah ada organisasi induk koperasi yang menaungi pedagang pasar tradisional dan terdaftar sebagai anggota luar biasa Kadin Indonesia yang bisa kami ajak sebagai mitra pelaksana?",
+      "answerSketch": "Ya, INKOPPAS (Induk Koperasi Pedagang Pasar) tercatat sebagai Anggota Luar Biasa (ALB) Kadin Indonesia.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "partner:induk-koperasi-pedagang-pasar-inkoppas",
+        "recordType": "partner",
+        "documentTitle": "Induk Koperasi Pedagang Pasar (INKOPPAS)",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-080",
+      "bucket": "entity",
+      "question": "Is there an associate member association under Kadin Indonesia that represents companies supplying and supporting the oil and gas industry, who we could bring in as a consortium partner for an energy sector project?",
+      "answerSketch": "Yes — an association of oil and gas supporting industries (INPEMIGAS) is listed as an ALB (associate) member of Kadin Indonesia, with a listed contact.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "partner:industri-penunjang-migas-inpemigas",
+        "recordType": "partner",
+        "documentTitle": "Industri Penunjang Migas (INPEMIGAS)",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-081",
+      "bucket": "entity",
+      "question": "Have we ever built a vehicle tracking and route optimization platform for a large transport operator? Looking for a reference with fuel savings and on-time delivery numbers we can cite.",
+      "answerSketch": "A 12-month engagement with a national logistics operator delivered GPS telematics tracking for 800 vehicles, a route optimization engine, driver mobile app and dispatch center, cutting fuel costs 18% in year one and raising on-time delivery to 94%.",
+      "questionType": "who_has_experience",
+      "difficulty": "easy",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "project:fleet-logistics-management-system",
+        "recordType": "project",
+        "documentTitle": "Fleet & Logistics Management System",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-082",
+      "bucket": "entity",
+      "question": "Have we delivered a nationwide learning management system for a education ministry at multi-million student scale, including offline content sync and teacher change management? Looking for scale figures and rollout results to cite in a proposal.",
+      "answerSketch": "A 20-month project for the Ministry of Education built a cloud-native LMS for 2 million students and 120,000 teachers, onboarding 1.8M active learners in year one, adoption across 34 provinces, and a 40% cut in content delivery cost versus CD distribution.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "project:national-e-learning-platform-ministry-of-education",
+        "recordType": "project",
+        "documentTitle": "National E-Learning Platform — Ministry of Education",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-083",
+      "bucket": "entity",
+      "question": "Apakah kita punya pengalaman implementasi sistem informasi rumah sakit skala provinsi yang terhubung ke platform data kesehatan nasional? Saya butuh referensi jumlah rumah sakit yang berhasil go-live dan dampaknya terhadap waktu proses klaim.",
+      "answerSketch": "Proyek 22 bulan untuk Dinas Kesehatan Provinsi: penerapan HIS terintegrasi (EMR, farmasi, billing) di 120 rumah sakit dengan gateway integrasi SATUSEHAT/FHIR; 85 rumah sakit live dalam 18 bulan, waktu tunggu pasien turun 25%, pemrosesan klaim dari 14 hari menjadi 3 hari.",
+      "questionType": "who_has_experience",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "project:hospital-information-system-provincial-health-network",
+        "recordType": "project",
+        "documentTitle": "Hospital Information System — Provincial Health Network",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-084",
+      "bucket": "entity",
+      "question": "When we bid for city government digital transformation work, what do we usually lead with as our edge over other consultancies, and what objections do evaluation panels tend to raise?",
+      "answerSketch": "Differentiators include embedded PMO delivery rather than advisory-only, the Surabaya command centre reference, AI/computer vision for traffic, cross-sector integration (health, transport, environment), and local government change management. Evaluators commonly question data quality assumptions, cross-agency coordination, and timeline realism.",
+      "questionType": "evaluative",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "knowledge:competitive-positioning-smart-city-engagements",
+        "recordType": "knowledge",
+        "documentTitle": "Competitive Positioning — Smart City Engagements",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-085",
+      "bucket": "entity",
+      "question": "Apa saja kriteria mutu wajib yang harus dipenuhi tiap bagian proposal AMANA (ringkasan eksekutif, pendekatan teknis, susunan tim, manajemen risiko) dan berapa skor minimal QC agar draf dianggap siap dikirim?",
+      "answerSketch": "Ringkasan eksekutif wajib memuat 3 angka kunci dan outcome spesifik klien; pendekatan teknis merujuk minimal 2 proyek sejenis; susunan tim mencantumkan personel kunci bernama dengan pengalaman relevan; manajemen risiko minimal 5 risiko beserta mitigasi konkret; target skor QC 80+ untuk draf siap submit.",
+      "questionType": "procedural",
+      "difficulty": "medium",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": "unknown",
+      "crossLingual": false,
+      "expected": {
+        "recordId": "knowledge:proposal-quality-standards-bab7-structure",
+        "recordType": "knowledge",
+        "documentTitle": "Proposal Quality Standards — BAB7 Structure",
+        "practiceGroup": null
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      }
+    },
+    {
+      "id": "amana-eval-086",
+      "bucket": "unanswerable",
+      "question": "What does our work say about land certification and tenure security for informal settlements in Indonesian cities, and how have kampung upgrading or urban land consolidation schemes been financed by local governments?",
+      "whyUncovered": "The corpus covers digital government, health, education, and public financial/strategy transformation work; it contains nothing on housing policy, land tenure, land certification, or slum/kampung upgrading programs.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "housing and urban land tenure policy",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-087",
+      "bucket": "unanswerable",
+      "question": "What evaluation findings exist on smallholder rice farmer subsidy schemes and their impact on household food security in eastern Indonesia?",
+      "whyUncovered": "The corpus covers digital government, health, education, and strategy transformation work; it contains no agriculture, farm subsidy, or food security programming material.",
+      "plausibility": "high",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "agriculture and food security programming",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-088",
+      "bucket": "unanswerable",
+      "question": "What reserve price methodology and payment terms did Indonesia use for the 700 MHz and 26 GHz 5G spectrum auctions, and how were coverage obligations attached to the winning licences?",
+      "whyUncovered": "The corpus covers digital government platforms, health and education systems, fiscal information systems, digital ID, and AI policy dialogue, but contains no material on telecommunications spectrum licensing, auction design, reserve pricing, or radio frequency allocation policy.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "telecommunications spectrum auctions",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-089",
+      "bucket": "unanswerable",
+      "question": "Bagaimana mekanisme perdagangan karbon di Bursa Karbon Indonesia (IDXCarbon) dapat dimanfaatkan pemerintah daerah untuk membiayai proyek adaptasi iklim, dan apa saja syarat sertifikasi unit karbonnya?",
+      "whyUncovered": "Korpus AMANA berfokus pada kesehatan digital, identitas digital, pelayanan publik, keuangan daerah (SIKD), pendidikan, dan transformasi strategi; tidak ada materi mengenai pembiayaan iklim, pasar karbon, atau bursa karbon.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "climate finance and carbon markets",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-090",
+      "bucket": "unanswerable",
+      "question": "Berapa besar kebutuhan investasi dan bagaimana skema pembiayaan untuk perluasan jaringan air minum perpipaan serta pengelolaan air limbah domestik terpusat di kota-kota menengah Indonesia?",
+      "whyUncovered": "Korpus berfokus pada transformasi digital, kesehatan digital, pendidikan, dan strategi kelembagaan; tidak ada materi mengenai infrastruktur air minum, sanitasi, atau pembiayaan SPAM/SPALD.",
+      "plausibility": "high",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "water and sanitation infrastructure delivery",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-091",
+      "bucket": "unanswerable",
+      "question": "What are the operational lessons from KPU's voter roll (DPT) cleansing and biometric verification at polling stations during the 2024 simultaneous elections, and how could e-voting be piloted at the regional level?",
+      "whyUncovered": "The corpus covers digital government, health, education, fiscal systems and digital ID use cases, but contains no material on electoral administration, voter registration rolls, election commission operations, or e-voting.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "electoral systems and voter administration",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-092",
+      "bucket": "unanswerable",
+      "question": "What competency standards and curriculum models are used for seafarer and fisheries vocational training centers in Indonesia, and how are graduates linked to employment in the maritime sector?",
+      "whyUncovered": "The corpus covers digital government, health systems, education platforms, and strategy/transformation training, but contains nothing on maritime or fisheries vocational education, seafarer certification, or blue-economy workforce development.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "vocational training for the maritime sector",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-093",
+      "bucket": "unanswerable",
+      "question": "Bagaimana model pembiayaan dan tata kelola sistem rekam medis elektronik di negara-negara kepulauan Pasifik seperti Fiji, Samoa, dan Vanuatu, serta pelajaran apa yang bisa diambil untuk kerja sama kesehatan digital regional?",
+      "whyUncovered": "Korpus AMANA berfokus pada konteks Indonesia (SATUSEHAT, SIKD, DKI Jakarta, IKD) dan beberapa proposal generik; tidak ada materi tentang sistem kesehatan digital atau tata kelola di negara kepulauan Pasifik.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "a geography outside Indonesia, such as a Pacific island state",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-094",
+      "bucket": "unanswerable",
+      "question": "Bagaimana standar penanganan tiket layanan internal (SLA) dan struktur helpdesk yang dijalankan oleh practice group Operations AMANA untuk mendukung tim proyek di kantor?",
+      "whyUncovered": "Korpus hanya memuat materi proyek klien di bidang digital, kesehatan/pendidikan, dan strategi-transformasi, serta dokumen SDM seperti career grading; tidak ada dokumen tentang operasional internal, helpdesk, maupun SLA layanan internal AMANA.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "the operations practice group's internal service delivery work",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-095",
+      "bucket": "unanswerable",
+      "question": "What approaches have we used for monitoring environmental compliance and community relations at nickel mining operations in Sulawesi, including any digital permitting or royalty tracking systems for the extractive sector?",
+      "whyUncovered": "The corpus covers digital government, health, education, fiscal/SIKD, smart city, and assorted IT proposals, but contains no material on mining, extractive industries, environmental compliance monitoring, or Sulawesi nickel operations.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "a sector AMANA has no documented work in, such as mining or extractive industries",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-096",
+      "bucket": "unanswerable",
+      "question": "Bagaimana metode penetapan besaran dan mekanisme penyaluran bantuan tunai bersyarat untuk keluarga miskin di daerah terdampak bencana, termasuk kriteria graduasi penerima manfaat?",
+      "whyUncovered": "Korpus tidak memuat materi tentang desain program perlindungan sosial atau bantuan tunai; fokusnya pada kesehatan digital, layanan publik, pendidikan, dan transformasi keuangan daerah.",
+      "plausibility": "high",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "social protection cash transfer programme design",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-097",
+      "bucket": "unanswerable",
+      "question": "What are the offset and local content requirements Indonesia applies to foreign defence equipment procurement, and how do they affect domestic industry participation in military acquisition programs?",
+      "whyUncovered": "The corpus covers digital government, health, education, public finance, and commercial IT proposals; it contains no material on defence procurement policy, offset rules, or military acquisition.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "en",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "defence or military procurement",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-098",
+      "bucket": "unanswerable",
+      "question": "Bagaimana hasil evaluasi pelaksanaan e-government di pemerintah daerah Indonesia pada periode 2008-2010, termasuk tingkat kesiapan infrastruktur TIK kabupaten/kota saat itu?",
+      "whyUncovered": "Seluruh korpus berfokus pada inisiatif digital, kesehatan, dan transformasi periode 2020-an hingga 2029; tidak ada dokumen yang membahas evaluasi e-government daerah akhir 2000-an.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "a specific calendar year well before any document in the corpus",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-099",
+      "bucket": "unanswerable",
+      "question": "Bagaimana strategi pengembangan desa wisata berbasis ekonomi kreatif di Nusa Tenggara Timur, termasuk skema pembiayaan dan indikator keberhasilan kunjungan wisatawan?",
+      "whyUncovered": "Korpus tidak memuat materi tentang pariwisata maupun ekonomi kreatif; fokusnya pada pemerintahan digital, kesehatan digital, pendidikan, dan transformasi keuangan daerah. Tidak ada dokumen terkait NTT atau desa wisata.",
+      "plausibility": "medium",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "tourism and creative economy development",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    },
+    {
+      "id": "amana-eval-100",
+      "bucket": "unanswerable",
+      "question": "Bagaimana skema pembiayaan Global Fund to Fight AIDS, Tuberculosis and Malaria mengatur pencairan dana hibah untuk program penanggulangan TB di Indonesia, termasuk syarat co-financing dari APBN?",
+      "whyUncovered": "Korpus membahas pembiayaan kesehatan digital dan penganggaran domestik, tetapi tidak pernah membahas instrumen pembiayaan internasional Global Fund maupun mekanisme hibah dan co-financing-nya.",
+      "plausibility": "high",
+      "answerSketch": null,
+      "questionType": "unanswerable",
+      "difficulty": "hard",
+      "reusesSourceWording": false,
+      "questionLanguage": "id",
+      "sourceLanguage": null,
+      "crossLingual": false,
+      "theme": "a named international financing instrument the corpus never discusses",
+      "expected": {
+        "recordId": null,
+        "recordType": "none",
+        "shouldReturnNoSupport": true
+      },
+      "provenance": {
+        "chunkQuality": null,
+        "tokenEstimate": null
+      },
+      "negativeCheck": {
+        "topScore": 0,
+        "topId": null,
+        "topTitle": null,
+        "hitCount": 0,
+        "verdict": "confirmed_unanswerable"
+      }
+    }
+  ]
+}
